@@ -90,7 +90,7 @@ final class TwierTests: XCTestCase {
     var nerror: Bool = false
     let context = PersistenceController.shared.container.viewContext
     let expectation = expectation(description: "Promise...")
-    let text = "Okay Apple ... i need your help!!!"
+    let text = "Okay Apple ... i need your help!!! I'm still less than a year into investing, but haven't been able to find a mentor.. suggestions?"
     
     
     //when
