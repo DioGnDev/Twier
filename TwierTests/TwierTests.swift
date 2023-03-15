@@ -6,30 +6,116 @@
 
 import XCTest
 @testable import Twier
+import CoreData
+import Combine
+
+struct MockCreateLocalDataSourceImpl: CreateLocalDataSource {
+  
+  func createPost(text: String,
+                  image: Data?,
+                  context: NSManagedObjectContext) -> AnyPublisher<Bool, DatabaseError> {
+    
+    return Future<Bool, DatabaseError> { completion in
+      
+      let post = Post()
+      post.postText = text
+      post.image = image
+      
+      let user = User()
+      user.user = "Dio"
+      user.username = "diiyo"
+      user.posts = NSSet(array: [post])
+      
+      do {
+        try context.save()
+        completion(.success(true))
+      }catch {
+        completion(.failure(.init()))
+      }
+      
+    }.eraseToAnyPublisher()
+    
+  }
+}
 
 final class TwierTests: XCTestCase {
-
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+  
+  var sut: CreateLocalDataSource!
+  var subscriptions = Set<AnyCancellable>()
+  
+  override func setUp() {
+    super.setUp()
+    
+    sut = MockCreateLocalDataSourceImpl()
+    
+  }
+  
+  func test_saveToLocalDataAndReturnFailed() {
+    //given
+    var success: Bool = false
+    var nerror: Bool = false
+    let context = PersistenceController.shared.container.viewContext
+    let expectation = expectation(description: "Promise...")
+    let text = "Okay Apple ... i need your help!!!"
+    
+    
+    //when
+    sut.createPost(text: text,
+                   image: Data(),
+                   context: context)
+    .receive(on: DispatchQueue.global(qos: .userInteractive))
+    .sink { completion in
+      switch completion {
+      case .failure:
+        nerror = true
+      case .finished:
+        break
+      }
+      expectation.fulfill()
+    } receiveValue: { succeedded in
+      success = succeedded
     }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    .store(in: &subscriptions)
+    
+    
+    //then
+    waitForExpectations(timeout: 5)
+    XCTAssertEqual(success, false)
+    XCTAssertEqual(nerror, true)
+  }
+  
+  func test_saveToLocalDataAndReturnSuccess() {
+    //given
+    var success: Bool = false
+    var nerror: Bool = false
+    let context = PersistenceController.shared.container.viewContext
+    let expectation = expectation(description: "Promise...")
+    let text = "Okay Apple ... i need your help!!!"
+    
+    
+    //when
+    sut.createPost(text: text,
+                   image: Data(),
+                   context: context)
+    .receive(on: DispatchQueue.global(qos: .userInteractive))
+    .sink { completion in
+      switch completion {
+      case .failure:
+        nerror = true
+      case .finished:
+        break
+      }
+      expectation.fulfill()
+    } receiveValue: { succeedded in
+      success = succeedded
     }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
-
+    .store(in: &subscriptions)
+    
+    
+    //then
+    waitForExpectations(timeout: 5)
+    XCTAssertEqual(success, true)
+    XCTAssertEqual(nerror, false)
+  }
+  
 }
