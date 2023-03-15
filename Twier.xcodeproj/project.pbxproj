@@ -1,0 +1,603 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4623A66329C17D6B00FFAEBE /* TwierApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4623A66229C17D6B00FFAEBE /* TwierApp.swift */; };
+		4623A66529C17D6B00FFAEBE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4623A66429C17D6B00FFAEBE /* ContentView.swift */; };
+		4623A66729C17D6D00FFAEBE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4623A66629C17D6D00FFAEBE /* Assets.xcassets */; };
+		4623A66A29C17D6D00FFAEBE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4623A66929C17D6D00FFAEBE /* Preview Assets.xcassets */; };
+		4623A66C29C17D6D00FFAEBE /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4623A66B29C17D6D00FFAEBE /* Persistence.swift */; };
+		4623A66F29C17D6D00FFAEBE /* Twier.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4623A66D29C17D6D00FFAEBE /* Twier.xcdatamodeld */; };
+		4623A67929C17D6D00FFAEBE /* TwierTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4623A67829C17D6D00FFAEBE /* TwierTests.swift */; };
+		4623A68329C17D6D00FFAEBE /* TwierUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4623A68229C17D6D00FFAEBE /* TwierUITests.swift */; };
+		4623A68529C17D6D00FFAEBE /* TwierUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4623A68429C17D6D00FFAEBE /* TwierUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4623A67529C17D6D00FFAEBE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4623A65729C17D6B00FFAEBE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4623A65E29C17D6B00FFAEBE;
+			remoteInfo = Twier;
+		};
+		4623A67F29C17D6D00FFAEBE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4623A65729C17D6B00FFAEBE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4623A65E29C17D6B00FFAEBE;
+			remoteInfo = Twier;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4623A65F29C17D6B00FFAEBE /* Twier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Twier.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4623A66229C17D6B00FFAEBE /* TwierApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwierApp.swift; sourceTree = "<group>"; };
+		4623A66429C17D6B00FFAEBE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		4623A66629C17D6D00FFAEBE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4623A66929C17D6D00FFAEBE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4623A66B29C17D6D00FFAEBE /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		4623A66E29C17D6D00FFAEBE /* Twier.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Twier.xcdatamodel; sourceTree = "<group>"; };
+		4623A67429C17D6D00FFAEBE /* TwierTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TwierTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4623A67829C17D6D00FFAEBE /* TwierTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwierTests.swift; sourceTree = "<group>"; };
+		4623A67E29C17D6D00FFAEBE /* TwierUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TwierUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4623A68229C17D6D00FFAEBE /* TwierUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwierUITests.swift; sourceTree = "<group>"; };
+		4623A68429C17D6D00FFAEBE /* TwierUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwierUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4623A65C29C17D6B00FFAEBE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4623A67129C17D6D00FFAEBE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4623A67B29C17D6D00FFAEBE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4623A65629C17D6B00FFAEBE = {
+			isa = PBXGroup;
+			children = (
+				4623A66129C17D6B00FFAEBE /* Twier */,
+				4623A67729C17D6D00FFAEBE /* TwierTests */,
+				4623A68129C17D6D00FFAEBE /* TwierUITests */,
+				4623A66029C17D6B00FFAEBE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4623A66029C17D6B00FFAEBE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4623A65F29C17D6B00FFAEBE /* Twier.app */,
+				4623A67429C17D6D00FFAEBE /* TwierTests.xctest */,
+				4623A67E29C17D6D00FFAEBE /* TwierUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4623A66129C17D6B00FFAEBE /* Twier */ = {
+			isa = PBXGroup;
+			children = (
+				4623A66229C17D6B00FFAEBE /* TwierApp.swift */,
+				4623A66429C17D6B00FFAEBE /* ContentView.swift */,
+				4623A66629C17D6D00FFAEBE /* Assets.xcassets */,
+				4623A66B29C17D6D00FFAEBE /* Persistence.swift */,
+				4623A66D29C17D6D00FFAEBE /* Twier.xcdatamodeld */,
+				4623A66829C17D6D00FFAEBE /* Preview Content */,
+			);
+			path = Twier;
+			sourceTree = "<group>";
+		};
+		4623A66829C17D6D00FFAEBE /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				4623A66929C17D6D00FFAEBE /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		4623A67729C17D6D00FFAEBE /* TwierTests */ = {
+			isa = PBXGroup;
+			children = (
+				4623A67829C17D6D00FFAEBE /* TwierTests.swift */,
+			);
+			path = TwierTests;
+			sourceTree = "<group>";
+		};
+		4623A68129C17D6D00FFAEBE /* TwierUITests */ = {
+			isa = PBXGroup;
+			children = (
+				4623A68229C17D6D00FFAEBE /* TwierUITests.swift */,
+				4623A68429C17D6D00FFAEBE /* TwierUITestsLaunchTests.swift */,
+			);
+			path = TwierUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4623A65E29C17D6B00FFAEBE /* Twier */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4623A68829C17D6D00FFAEBE /* Build configuration list for PBXNativeTarget "Twier" */;
+			buildPhases = (
+				4623A65B29C17D6B00FFAEBE /* Sources */,
+				4623A65C29C17D6B00FFAEBE /* Frameworks */,
+				4623A65D29C17D6B00FFAEBE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Twier;
+			productName = Twier;
+			productReference = 4623A65F29C17D6B00FFAEBE /* Twier.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4623A67329C17D6D00FFAEBE /* TwierTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4623A68B29C17D6D00FFAEBE /* Build configuration list for PBXNativeTarget "TwierTests" */;
+			buildPhases = (
+				4623A67029C17D6D00FFAEBE /* Sources */,
+				4623A67129C17D6D00FFAEBE /* Frameworks */,
+				4623A67229C17D6D00FFAEBE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4623A67629C17D6D00FFAEBE /* PBXTargetDependency */,
+			);
+			name = TwierTests;
+			productName = TwierTests;
+			productReference = 4623A67429C17D6D00FFAEBE /* TwierTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		4623A67D29C17D6D00FFAEBE /* TwierUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4623A68E29C17D6D00FFAEBE /* Build configuration list for PBXNativeTarget "TwierUITests" */;
+			buildPhases = (
+				4623A67A29C17D6D00FFAEBE /* Sources */,
+				4623A67B29C17D6D00FFAEBE /* Frameworks */,
+				4623A67C29C17D6D00FFAEBE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4623A68029C17D6D00FFAEBE /* PBXTargetDependency */,
+			);
+			name = TwierUITests;
+			productName = TwierUITests;
+			productReference = 4623A67E29C17D6D00FFAEBE /* TwierUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4623A65729C17D6B00FFAEBE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1400;
+				LastUpgradeCheck = 1400;
+				TargetAttributes = {
+					4623A65E29C17D6B00FFAEBE = {
+						CreatedOnToolsVersion = 14.0.1;
+					};
+					4623A67329C17D6D00FFAEBE = {
+						CreatedOnToolsVersion = 14.0.1;
+						TestTargetID = 4623A65E29C17D6B00FFAEBE;
+					};
+					4623A67D29C17D6D00FFAEBE = {
+						CreatedOnToolsVersion = 14.0.1;
+						TestTargetID = 4623A65E29C17D6B00FFAEBE;
+					};
+				};
+			};
+			buildConfigurationList = 4623A65A29C17D6B00FFAEBE /* Build configuration list for PBXProject "Twier" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4623A65629C17D6B00FFAEBE;
+			productRefGroup = 4623A66029C17D6B00FFAEBE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4623A65E29C17D6B00FFAEBE /* Twier */,
+				4623A67329C17D6D00FFAEBE /* TwierTests */,
+				4623A67D29C17D6D00FFAEBE /* TwierUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4623A65D29C17D6B00FFAEBE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4623A66A29C17D6D00FFAEBE /* Preview Assets.xcassets in Resources */,
+				4623A66729C17D6D00FFAEBE /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4623A67229C17D6D00FFAEBE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4623A67C29C17D6D00FFAEBE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4623A65B29C17D6B00FFAEBE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4623A66C29C17D6D00FFAEBE /* Persistence.swift in Sources */,
+				4623A66F29C17D6D00FFAEBE /* Twier.xcdatamodeld in Sources */,
+				4623A66529C17D6B00FFAEBE /* ContentView.swift in Sources */,
+				4623A66329C17D6B00FFAEBE /* TwierApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4623A67029C17D6D00FFAEBE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4623A67929C17D6D00FFAEBE /* TwierTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4623A67A29C17D6D00FFAEBE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4623A68529C17D6D00FFAEBE /* TwierUITestsLaunchTests.swift in Sources */,
+				4623A68329C17D6D00FFAEBE /* TwierUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4623A67629C17D6D00FFAEBE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4623A65E29C17D6B00FFAEBE /* Twier */;
+			targetProxy = 4623A67529C17D6D00FFAEBE /* PBXContainerItemProxy */;
+		};
+		4623A68029C17D6D00FFAEBE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4623A65E29C17D6B00FFAEBE /* Twier */;
+			targetProxy = 4623A67F29C17D6D00FFAEBE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		4623A68629C17D6D00FFAEBE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4623A68729C17D6D00FFAEBE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4623A68929C17D6D00FFAEBE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Twier/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = id.awesome.Twier;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4623A68A29C17D6D00FFAEBE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Twier/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = id.awesome.Twier;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		4623A68C29C17D6D00FFAEBE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = id.awesome.TwierTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Twier.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Twier";
+			};
+			name = Debug;
+		};
+		4623A68D29C17D6D00FFAEBE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = id.awesome.TwierTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Twier.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Twier";
+			};
+			name = Release;
+		};
+		4623A68F29C17D6D00FFAEBE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = id.awesome.TwierUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Twier;
+			};
+			name = Debug;
+		};
+		4623A69029C17D6D00FFAEBE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = id.awesome.TwierUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Twier;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4623A65A29C17D6B00FFAEBE /* Build configuration list for PBXProject "Twier" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4623A68629C17D6D00FFAEBE /* Debug */,
+				4623A68729C17D6D00FFAEBE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4623A68829C17D6D00FFAEBE /* Build configuration list for PBXNativeTarget "Twier" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4623A68929C17D6D00FFAEBE /* Debug */,
+				4623A68A29C17D6D00FFAEBE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4623A68B29C17D6D00FFAEBE /* Build configuration list for PBXNativeTarget "TwierTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4623A68C29C17D6D00FFAEBE /* Debug */,
+				4623A68D29C17D6D00FFAEBE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4623A68E29C17D6D00FFAEBE /* Build configuration list for PBXNativeTarget "TwierUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4623A68F29C17D6D00FFAEBE /* Debug */,
+				4623A69029C17D6D00FFAEBE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		4623A66D29C17D6D00FFAEBE /* Twier.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				4623A66E29C17D6D00FFAEBE /* Twier.xcdatamodel */,
+			);
+			currentVersion = 4623A66E29C17D6D00FFAEBE /* Twier.xcdatamodel */;
+			path = Twier.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 4623A65729C17D6B00FFAEBE /* Project object */;
+}
