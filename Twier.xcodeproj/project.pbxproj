@@ -21,6 +21,10 @@
 		4623A68529C17D6D00FFAEBE /* TwierUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4623A68429C17D6D00FFAEBE /* TwierUITestsLaunchTests.swift */; };
 		463840BF29C2A7AA00182532 /* CreateLocalDataSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463840BE29C2A7AA00182532 /* CreateLocalDataSourceTests.swift */; };
 		463840C129C2A82900182532 /* UserLocalDataSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463840C029C2A82900182532 /* UserLocalDataSourceTests.swift */; };
+		463840CA29C3137A00182532 /* PostInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463840C929C3137A00182532 /* PostInteractor.swift */; };
+		463840CC29C313B400182532 /* PostRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463840CB29C313B400182532 /* PostRepository.swift */; };
+		463840CE29C314EF00182532 /* CreateInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463840CD29C314EF00182532 /* CreateInteractor.swift */; };
+		463840D029C3179300182532 /* UserInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463840CF29C3179300182532 /* UserInteractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +66,10 @@
 		463840B529C2A0F100182532 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		463840BE29C2A7AA00182532 /* CreateLocalDataSourceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateLocalDataSourceTests.swift; sourceTree = "<group>"; };
 		463840C029C2A82900182532 /* UserLocalDataSourceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocalDataSourceTests.swift; sourceTree = "<group>"; };
+		463840C929C3137A00182532 /* PostInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostInteractor.swift; sourceTree = "<group>"; };
+		463840CB29C313B400182532 /* PostRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostRepository.swift; sourceTree = "<group>"; };
+		463840CD29C314EF00182532 /* CreateInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateInteractor.swift; sourceTree = "<group>"; };
+		463840CF29C3179300182532 /* UserInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInteractor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +100,7 @@
 		4612F2DA29C2302400B20EFD /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				463840C229C30C9400182532 /* Post */,
 				4612F2DC29C2303D00B20EFD /* Create */,
 			);
 			path = Features;
@@ -103,7 +112,6 @@
 				4612F2E329C230A800B20EFD /* DataSource */,
 				4612F2E229C2307400B20EFD /* Entity */,
 				4612F2E129C2306500B20EFD /* Router */,
-				4612F2E029C2306100B20EFD /* View */,
 				4612F2DF29C2305400B20EFD /* Repository */,
 				4612F2DE29C2304F00B20EFD /* Interactor */,
 				4612F2DD29C2304900B20EFD /* Presenter */,
@@ -114,6 +122,7 @@
 		4612F2DD29C2304900B20EFD /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				4612F2E029C2306100B20EFD /* View */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -121,6 +130,7 @@
 		4612F2DE29C2304F00B20EFD /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
+				463840CD29C314EF00182532 /* CreateInteractor.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -166,6 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				4612F2E829C2311A00B20EFD /* DatabaseError.swift */,
+				463840CF29C3179300182532 /* UserInteractor.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -242,6 +253,63 @@
 				463840B529C2A0F100182532 /* User+CoreDataProperties.swift */,
 			);
 			path = Local;
+			sourceTree = "<group>";
+		};
+		463840C229C30C9400182532 /* Post */ = {
+			isa = PBXGroup;
+			children = (
+				463840C829C30CC200182532 /* Router */,
+				463840C729C30CB000182532 /* DataSource */,
+				463840C629C30CAA00182532 /* Repository */,
+				463840C429C30CA100182532 /* Interactor */,
+				463840C329C30C9B00182532 /* Presenter */,
+			);
+			path = Post;
+			sourceTree = "<group>";
+		};
+		463840C329C30C9B00182532 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				463840C529C30CA500182532 /* View */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		463840C429C30CA100182532 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				463840C929C3137A00182532 /* PostInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		463840C529C30CA500182532 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		463840C629C30CAA00182532 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				463840CB29C313B400182532 /* PostRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		463840C729C30CB000182532 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		463840C829C30CC200182532 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -374,12 +442,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				463840CA29C3137A00182532 /* PostInteractor.swift in Sources */,
 				4612F2E529C230C100B20EFD /* CreateLocalDataSourceImpl.swift in Sources */,
+				463840D029C3179300182532 /* UserInteractor.swift in Sources */,
 				4623A66C29C17D6D00FFAEBE /* Persistence.swift in Sources */,
 				4623A66F29C17D6D00FFAEBE /* Twier.xcdatamodeld in Sources */,
 				4623A66529C17D6B00FFAEBE /* ContentView.swift in Sources */,
 				4612F2E929C2311A00B20EFD /* DatabaseError.swift in Sources */,
 				4612F2EB29C231CB00B20EFD /* CreateRepository.swift in Sources */,
+				463840CC29C313B400182532 /* PostRepository.swift in Sources */,
+				463840CE29C314EF00182532 /* CreateInteractor.swift in Sources */,
 				4623A66329C17D6B00FFAEBE /* TwierApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
