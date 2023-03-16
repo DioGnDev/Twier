@@ -10,8 +10,6 @@
 		4612F2E529C230C100B20EFD /* CreateLocalDataSourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4612F2E429C230C100B20EFD /* CreateLocalDataSourceImpl.swift */; };
 		4612F2E929C2311A00B20EFD /* DatabaseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4612F2E829C2311A00B20EFD /* DatabaseError.swift */; };
 		4612F2EB29C231CB00B20EFD /* CreateRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4612F2EA29C231CB00B20EFD /* CreateRepository.swift */; };
-		4612F2ED29C23CB300B20EFD /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4612F2EC29C23CB300B20EFD /* User+CoreDataClass.swift */; };
-		4612F2EF29C23CCA00B20EFD /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4612F2EE29C23CCA00B20EFD /* User+CoreDataProperties.swift */; };
 		4623A66329C17D6B00FFAEBE /* TwierApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4623A66229C17D6B00FFAEBE /* TwierApp.swift */; };
 		4623A66529C17D6B00FFAEBE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4623A66429C17D6B00FFAEBE /* ContentView.swift */; };
 		4623A66729C17D6D00FFAEBE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4623A66629C17D6D00FFAEBE /* Assets.xcassets */; };
@@ -21,8 +19,8 @@
 		4623A67929C17D6D00FFAEBE /* TwierTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4623A67829C17D6D00FFAEBE /* TwierTests.swift */; };
 		4623A68329C17D6D00FFAEBE /* TwierUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4623A68229C17D6D00FFAEBE /* TwierUITests.swift */; };
 		4623A68529C17D6D00FFAEBE /* TwierUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4623A68429C17D6D00FFAEBE /* TwierUITestsLaunchTests.swift */; };
-		4623A69329C21B3100FFAEBE /* Post+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4623A69229C21B3100FFAEBE /* Post+CoreDataClass.swift */; };
-		4623A69529C21B7200FFAEBE /* Post+CoredataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4623A69429C21B7200FFAEBE /* Post+CoredataProperties.swift */; };
+		463840BF29C2A7AA00182532 /* CreateLocalDataSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463840BE29C2A7AA00182532 /* CreateLocalDataSourceTests.swift */; };
+		463840C129C2A82900182532 /* CreateUserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463840C029C2A82900182532 /* CreateUserTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,8 +44,6 @@
 		4612F2E429C230C100B20EFD /* CreateLocalDataSourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateLocalDataSourceImpl.swift; sourceTree = "<group>"; };
 		4612F2E829C2311A00B20EFD /* DatabaseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseError.swift; sourceTree = "<group>"; };
 		4612F2EA29C231CB00B20EFD /* CreateRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRepository.swift; sourceTree = "<group>"; };
-		4612F2EC29C23CB300B20EFD /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
-		4612F2EE29C23CCA00B20EFD /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		4623A65F29C17D6B00FFAEBE /* Twier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Twier.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4623A66229C17D6B00FFAEBE /* TwierApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwierApp.swift; sourceTree = "<group>"; };
 		4623A66429C17D6B00FFAEBE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -60,8 +56,12 @@
 		4623A67E29C17D6D00FFAEBE /* TwierUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TwierUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4623A68229C17D6D00FFAEBE /* TwierUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwierUITests.swift; sourceTree = "<group>"; };
 		4623A68429C17D6D00FFAEBE /* TwierUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwierUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		4623A69229C21B3100FFAEBE /* Post+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Post+CoreDataClass.swift"; sourceTree = "<group>"; };
-		4623A69429C21B7200FFAEBE /* Post+CoredataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Post+CoredataProperties.swift"; sourceTree = "<group>"; };
+		463840B229C2A0F100182532 /* Post+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Post+CoreDataClass.swift"; sourceTree = "<group>"; };
+		463840B329C2A0F100182532 /* Post+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Post+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		463840B429C2A0F100182532 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
+		463840B529C2A0F100182532 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		463840BE29C2A7AA00182532 /* CreateLocalDataSourceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateLocalDataSourceTests.swift; sourceTree = "<group>"; };
+		463840C029C2A82900182532 /* CreateUserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -218,6 +218,8 @@
 			isa = PBXGroup;
 			children = (
 				4623A67829C17D6D00FFAEBE /* TwierTests.swift */,
+				463840BE29C2A7AA00182532 /* CreateLocalDataSourceTests.swift */,
+				463840C029C2A82900182532 /* CreateUserTests.swift */,
 			);
 			path = TwierTests;
 			sourceTree = "<group>";
@@ -234,10 +236,10 @@
 		4623A69129C21AEA00FFAEBE /* Local */ = {
 			isa = PBXGroup;
 			children = (
-				4623A69229C21B3100FFAEBE /* Post+CoreDataClass.swift */,
-				4623A69429C21B7200FFAEBE /* Post+CoredataProperties.swift */,
-				4612F2EC29C23CB300B20EFD /* User+CoreDataClass.swift */,
-				4612F2EE29C23CCA00B20EFD /* User+CoreDataProperties.swift */,
+				463840B229C2A0F100182532 /* Post+CoreDataClass.swift */,
+				463840B329C2A0F100182532 /* Post+CoreDataProperties.swift */,
+				463840B429C2A0F100182532 /* User+CoreDataClass.swift */,
+				463840B529C2A0F100182532 /* User+CoreDataProperties.swift */,
 			);
 			path = Local;
 			sourceTree = "<group>";
@@ -375,14 +377,10 @@
 				4612F2E529C230C100B20EFD /* CreateLocalDataSourceImpl.swift in Sources */,
 				4623A66C29C17D6D00FFAEBE /* Persistence.swift in Sources */,
 				4623A66F29C17D6D00FFAEBE /* Twier.xcdatamodeld in Sources */,
-				4623A69329C21B3100FFAEBE /* Post+CoreDataClass.swift in Sources */,
-				4612F2ED29C23CB300B20EFD /* User+CoreDataClass.swift in Sources */,
 				4623A66529C17D6B00FFAEBE /* ContentView.swift in Sources */,
 				4612F2E929C2311A00B20EFD /* DatabaseError.swift in Sources */,
-				4612F2EF29C23CCA00B20EFD /* User+CoreDataProperties.swift in Sources */,
 				4612F2EB29C231CB00B20EFD /* CreateRepository.swift in Sources */,
 				4623A66329C17D6B00FFAEBE /* TwierApp.swift in Sources */,
-				4623A69529C21B7200FFAEBE /* Post+CoredataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -390,7 +388,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				463840BF29C2A7AA00182532 /* CreateLocalDataSourceTests.swift in Sources */,
 				4623A67929C17D6D00FFAEBE /* TwierTests.swift in Sources */,
+				463840C129C2A82900182532 /* CreateUserTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

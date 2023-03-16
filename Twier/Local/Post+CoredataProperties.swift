@@ -1,13 +1,26 @@
 //
-//  Post+CoredataProperties.swift
+//  Post+CoreDataProperties.swift
 //  Twier
+//
 //
 //
 
 import Foundation
 import CoreData
 
+
 extension Post {
-  @NSManaged var postText: String
-  @NSManaged var image: Data?  
+  
+  @nonobjc public class func fetchRequest() -> NSFetchRequest<Post> {
+    return NSFetchRequest<Post>(entityName: "Post")
+  }
+  
+  @NSManaged public var image: Data?
+  @NSManaged public var message: String?
+  @NSManaged public var user: User?
+  
+}
+
+extension Post : Identifiable {
+  
 }

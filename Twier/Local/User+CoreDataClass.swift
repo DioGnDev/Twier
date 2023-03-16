@@ -3,10 +3,12 @@
 //  Twier
 //
 //
+//
 
+import Foundation
 import CoreData
 
 @objc(User)
-class User: NSManagedObject {
+public class User: NSManagedObject {
   
 }

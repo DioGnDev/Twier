@@ -13,6 +13,9 @@ struct TwierApp: App {
     WindowGroup {
       ContentView()
         .environment(\.managedObjectContext, persistenceController.container.viewContext)
+        .onAppear{
+          print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first ?? "")
+        }
     }
   }
 }

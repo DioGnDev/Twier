@@ -9,7 +9,8 @@ import CoreData
 import Combine
 
 protocol CreateLocalDataSource {
-  func createPost(text: String,
+  func createPost(user: String,
+                  text: String,
                   image: Data?,
                   context: NSManagedObjectContext) -> AnyPublisher<Bool, DatabaseError>
 }
@@ -17,7 +18,8 @@ protocol CreateLocalDataSource {
 
 struct CreateLocalDataSourceImpl: CreateLocalDataSource{
   
-  func createPost(text: String,
+  func createPost(user: String,
+                  text: String,
                   image: Data?,
                   context: NSManagedObjectContext) -> AnyPublisher<Bool, DatabaseError> {
     return Future<Bool, DatabaseError> { completion in
