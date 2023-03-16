@@ -26,7 +26,7 @@ final class CreateLocalDataSourceTests: XCTestCase {
     var nerror: Bool = false
     
     //when
-    sut.createPost(user: "diiyo99",
+    sut.createPost(username: "diiyo99",
                    text: text,
                    image: Data(),
                    context: context)
@@ -57,13 +57,13 @@ final class CreateLocalDataSourceTests: XCTestCase {
     
     let context = PersistenceController.shared.container.viewContext
     let expectation = expectation(description: "Promise...")
-    let text = "Okay Microsoft ... i need your help!!! I'm still less than a year into investing, but haven't been able to find a mentor.. suggestions?"
+    let text = "Okay Amazon ... i need your help!!! I'm still less than a year into investing, but haven't been able to find a mentor.. suggestions?"
     
     var success: Bool = false
     var nerror: Bool = false
     
     //when
-    sut.createPost(user: "diiyo99",
+    sut.createPost(username: "ilham99",
                    text: text,
                    image: Data(),
                    context: context)
@@ -91,7 +91,7 @@ final class CreateLocalDataSourceTests: XCTestCase {
 }
 
 struct MockCreateLocalDataSourceFailed: CreateLocalDataSource {
-  func createPost(user: String,
+  func createPost(username: String,
                   text: String,
                   image: Data?,
                   context: NSManagedObjectContext) -> AnyPublisher<Bool, DatabaseError> {
@@ -107,7 +107,7 @@ struct MockCreateLocalDataSourceFailed: CreateLocalDataSource {
 
 struct MockCreateLocalDataSourceImpl: CreateLocalDataSource {
   
-  func createPost(user: String,
+  func createPost(username: String,
                   text: String,
                   image: Data?,
                   context: NSManagedObjectContext) -> AnyPublisher<Bool, DatabaseError> {
@@ -115,21 +115,17 @@ struct MockCreateLocalDataSourceImpl: CreateLocalDataSource {
     return Future<Bool, DatabaseError> { completion in
       
       let userFetchRequest = User.fetchRequest()
-      let predicate = NSPredicate(format: "username == %@", user)
+      let predicate = NSPredicate(format: "username == %@", username)
       userFetchRequest.predicate = predicate
       guard let user = try? context.fetch(userFetchRequest).first else {
         return completion(.failure(.init()))
       }
       
-      print(user)
-      
       //create post
       let post = Post(context: context)
       post.message = text
       post.image = image
-      
-      //added to user
-      user.posts = NSSet(array: [post])
+      post.user = user
       
       do {
         try context.save()

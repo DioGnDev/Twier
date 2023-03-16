@@ -8,7 +8,6 @@
 import Foundation
 import CoreData
 
-
 extension Post {
   
   @nonobjc public class func fetchRequest() -> NSFetchRequest<Post> {
