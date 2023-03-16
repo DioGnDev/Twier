@@ -57,7 +57,7 @@ final class CreateLocalDataSourceTests: XCTestCase {
     
     let context = PersistenceController.shared.container.viewContext
     let expectation = expectation(description: "Promise...")
-    let text = "Okay Microsoft ... i need your help!!! I'm still less than a year into investing, but haven't been able to find a mentor.. suggestions?"
+    let text = "Okay Apple ... i need your help!!! I'm still less than a year into investing, but haven't been able to find a mentor.. suggestions?"
     
     var success: Bool = false
     var nerror: Bool = false
@@ -121,15 +121,11 @@ struct MockCreateLocalDataSourceImpl: CreateLocalDataSource {
         return completion(.failure(.init()))
       }
       
-      print(user)
-      
       //create post
       let post = Post(context: context)
       post.message = text
       post.image = image
-      
-      //added to user
-      user.posts = NSSet(array: [post])
+      post.user = user
       
       do {
         try context.save()

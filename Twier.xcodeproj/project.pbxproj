@@ -20,7 +20,7 @@
 		4623A68329C17D6D00FFAEBE /* TwierUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4623A68229C17D6D00FFAEBE /* TwierUITests.swift */; };
 		4623A68529C17D6D00FFAEBE /* TwierUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4623A68429C17D6D00FFAEBE /* TwierUITestsLaunchTests.swift */; };
 		463840BF29C2A7AA00182532 /* CreateLocalDataSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463840BE29C2A7AA00182532 /* CreateLocalDataSourceTests.swift */; };
-		463840C129C2A82900182532 /* CreateUserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463840C029C2A82900182532 /* CreateUserTests.swift */; };
+		463840C129C2A82900182532 /* UserLocalDataSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463840C029C2A82900182532 /* UserLocalDataSourceTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,7 +61,7 @@
 		463840B429C2A0F100182532 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
 		463840B529C2A0F100182532 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		463840BE29C2A7AA00182532 /* CreateLocalDataSourceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateLocalDataSourceTests.swift; sourceTree = "<group>"; };
-		463840C029C2A82900182532 /* CreateUserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserTests.swift; sourceTree = "<group>"; };
+		463840C029C2A82900182532 /* UserLocalDataSourceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocalDataSourceTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -219,7 +219,7 @@
 			children = (
 				4623A67829C17D6D00FFAEBE /* TwierTests.swift */,
 				463840BE29C2A7AA00182532 /* CreateLocalDataSourceTests.swift */,
-				463840C029C2A82900182532 /* CreateUserTests.swift */,
+				463840C029C2A82900182532 /* UserLocalDataSourceTests.swift */,
 			);
 			path = TwierTests;
 			sourceTree = "<group>";
@@ -390,7 +390,7 @@
 			files = (
 				463840BF29C2A7AA00182532 /* CreateLocalDataSourceTests.swift in Sources */,
 				4623A67929C17D6D00FFAEBE /* TwierTests.swift in Sources */,
-				463840C129C2A82900182532 /* CreateUserTests.swift in Sources */,
+				463840C129C2A82900182532 /* UserLocalDataSourceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
