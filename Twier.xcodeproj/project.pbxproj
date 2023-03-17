@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		4612F2E529C230C100B20EFD /* CreateLocalDataSourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4612F2E429C230C100B20EFD /* CreateLocalDataSourceImpl.swift */; };
 		4612F2E929C2311A00B20EFD /* DatabaseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4612F2E829C2311A00B20EFD /* DatabaseError.swift */; };
-		4612F2EB29C231CB00B20EFD /* CreateRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4612F2EA29C231CB00B20EFD /* CreateRepository.swift */; };
 		4623A66329C17D6B00FFAEBE /* TwierApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4623A66229C17D6B00FFAEBE /* TwierApp.swift */; };
 		4623A66529C17D6B00FFAEBE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4623A66429C17D6B00FFAEBE /* ContentView.swift */; };
 		4623A66729C17D6D00FFAEBE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4623A66629C17D6D00FFAEBE /* Assets.xcassets */; };
@@ -19,12 +18,24 @@
 		4623A67929C17D6D00FFAEBE /* TwierTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4623A67829C17D6D00FFAEBE /* TwierTests.swift */; };
 		4623A68329C17D6D00FFAEBE /* TwierUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4623A68229C17D6D00FFAEBE /* TwierUITests.swift */; };
 		4623A68529C17D6D00FFAEBE /* TwierUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4623A68429C17D6D00FFAEBE /* TwierUITestsLaunchTests.swift */; };
-		463840BF29C2A7AA00182532 /* CreateLocalDataSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463840BE29C2A7AA00182532 /* CreateLocalDataSourceTests.swift */; };
-		463840C129C2A82900182532 /* UserLocalDataSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463840C029C2A82900182532 /* UserLocalDataSourceTests.swift */; };
+		463840BF29C2A7AA00182532 /* CreateInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463840BE29C2A7AA00182532 /* CreateInteractorTests.swift */; };
+		463840C129C2A82900182532 /* UserInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463840C029C2A82900182532 /* UserInteractorTests.swift */; };
 		463840CA29C3137A00182532 /* PostInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463840C929C3137A00182532 /* PostInteractor.swift */; };
-		463840CC29C313B400182532 /* PostRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463840CB29C313B400182532 /* PostRepository.swift */; };
 		463840CE29C314EF00182532 /* CreateInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463840CD29C314EF00182532 /* CreateInteractor.swift */; };
 		463840D029C3179300182532 /* UserInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463840CF29C3179300182532 /* UserInteractor.swift */; };
+		463840D929C31D7E00182532 /* CreatePresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463840D829C31D7E00182532 /* CreatePresenterTests.swift */; };
+		463840DB29C3566C00182532 /* CreatePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463840DA29C3566C00182532 /* CreatePresenter.swift */; };
+		463840DE29C3589400182532 /* CreateViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463840DD29C3589400182532 /* CreateViewTests.swift */; };
+		46C2F77329C3EF6F00787DA5 /* CreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C2F77229C3EF6F00787DA5 /* CreateView.swift */; };
+		46ED29EA29C45CAF006109E0 /* UserLocalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46ED29E929C45CAF006109E0 /* UserLocalDataSource.swift */; };
+		46ED29ED29C45E46006109E0 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46ED29EC29C45E46006109E0 /* UserRepository.swift */; };
+		46ED29F029C46ED7006109E0 /* UserSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46ED29EF29C46ED7006109E0 /* UserSession.swift */; };
+		46ED29F529C47169006109E0 /* PhotoPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46ED29F429C47169006109E0 /* PhotoPicker.swift */; };
+		46ED29F729C472D8006109E0 /* TwierView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46ED29F629C472D8006109E0 /* TwierView.swift */; };
+		46ED29F929C473F0006109E0 /* TwierPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46ED29F829C473F0006109E0 /* TwierPresenter.swift */; };
+		46ED29FB29C4743F006109E0 /* TwierRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46ED29FA29C4743F006109E0 /* TwierRouter.swift */; };
+		46ED29FD29C47825006109E0 /* DependencyInjection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46ED29FC29C47825006109E0 /* DependencyInjection.swift */; };
+		46ED29FF29C47B97006109E0 /* CreateRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46ED29FE29C47B97006109E0 /* CreateRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,7 +58,6 @@
 /* Begin PBXFileReference section */
 		4612F2E429C230C100B20EFD /* CreateLocalDataSourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateLocalDataSourceImpl.swift; sourceTree = "<group>"; };
 		4612F2E829C2311A00B20EFD /* DatabaseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseError.swift; sourceTree = "<group>"; };
-		4612F2EA29C231CB00B20EFD /* CreateRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRepository.swift; sourceTree = "<group>"; };
 		4623A65F29C17D6B00FFAEBE /* Twier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Twier.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4623A66229C17D6B00FFAEBE /* TwierApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwierApp.swift; sourceTree = "<group>"; };
 		4623A66429C17D6B00FFAEBE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -64,12 +74,24 @@
 		463840B329C2A0F100182532 /* Post+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Post+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		463840B429C2A0F100182532 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
 		463840B529C2A0F100182532 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		463840BE29C2A7AA00182532 /* CreateLocalDataSourceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateLocalDataSourceTests.swift; sourceTree = "<group>"; };
-		463840C029C2A82900182532 /* UserLocalDataSourceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocalDataSourceTests.swift; sourceTree = "<group>"; };
+		463840BE29C2A7AA00182532 /* CreateInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateInteractorTests.swift; sourceTree = "<group>"; };
+		463840C029C2A82900182532 /* UserInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInteractorTests.swift; sourceTree = "<group>"; };
 		463840C929C3137A00182532 /* PostInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostInteractor.swift; sourceTree = "<group>"; };
-		463840CB29C313B400182532 /* PostRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostRepository.swift; sourceTree = "<group>"; };
 		463840CD29C314EF00182532 /* CreateInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateInteractor.swift; sourceTree = "<group>"; };
 		463840CF29C3179300182532 /* UserInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInteractor.swift; sourceTree = "<group>"; };
+		463840D829C31D7E00182532 /* CreatePresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePresenterTests.swift; sourceTree = "<group>"; };
+		463840DA29C3566C00182532 /* CreatePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePresenter.swift; sourceTree = "<group>"; };
+		463840DD29C3589400182532 /* CreateViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateViewTests.swift; sourceTree = "<group>"; };
+		46C2F77229C3EF6F00787DA5 /* CreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateView.swift; sourceTree = "<group>"; };
+		46ED29E929C45CAF006109E0 /* UserLocalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocalDataSource.swift; sourceTree = "<group>"; };
+		46ED29EC29C45E46006109E0 /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
+		46ED29EF29C46ED7006109E0 /* UserSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSession.swift; sourceTree = "<group>"; };
+		46ED29F429C47169006109E0 /* PhotoPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoPicker.swift; sourceTree = "<group>"; };
+		46ED29F629C472D8006109E0 /* TwierView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwierView.swift; sourceTree = "<group>"; };
+		46ED29F829C473F0006109E0 /* TwierPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwierPresenter.swift; sourceTree = "<group>"; };
+		46ED29FA29C4743F006109E0 /* TwierRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwierRouter.swift; sourceTree = "<group>"; };
+		46ED29FC29C47825006109E0 /* DependencyInjection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyInjection.swift; sourceTree = "<group>"; };
+		46ED29FE29C47B97006109E0 /* CreateRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +122,7 @@
 		4612F2DA29C2302400B20EFD /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				46ED29E729C45C78006109E0 /* User */,
 				463840C229C30C9400182532 /* Post */,
 				4612F2DC29C2303D00B20EFD /* Create */,
 			);
@@ -109,12 +132,12 @@
 		4612F2DC29C2303D00B20EFD /* Create */ = {
 			isa = PBXGroup;
 			children = (
-				4612F2E329C230A800B20EFD /* DataSource */,
-				4612F2E229C2307400B20EFD /* Entity */,
 				4612F2E129C2306500B20EFD /* Router */,
-				4612F2DF29C2305400B20EFD /* Repository */,
+				4612F2E229C2307400B20EFD /* Entity */,
 				4612F2DE29C2304F00B20EFD /* Interactor */,
 				4612F2DD29C2304900B20EFD /* Presenter */,
+				4612F2E029C2306100B20EFD /* View */,
+				4612F2E329C230A800B20EFD /* DataSource */,
 			);
 			path = Create;
 			sourceTree = "<group>";
@@ -122,7 +145,7 @@
 		4612F2DD29C2304900B20EFD /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				4612F2E029C2306100B20EFD /* View */,
+				463840DA29C3566C00182532 /* CreatePresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -135,17 +158,10 @@
 			path = Interactor;
 			sourceTree = "<group>";
 		};
-		4612F2DF29C2305400B20EFD /* Repository */ = {
-			isa = PBXGroup;
-			children = (
-				4612F2EA29C231CB00B20EFD /* CreateRepository.swift */,
-			);
-			path = Repository;
-			sourceTree = "<group>";
-		};
 		4612F2E029C2306100B20EFD /* View */ = {
 			isa = PBXGroup;
 			children = (
+				46C2F77229C3EF6F00787DA5 /* CreateView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -153,6 +169,7 @@
 		4612F2E129C2306500B20EFD /* Router */ = {
 			isa = PBXGroup;
 			children = (
+				46ED29FE29C47B97006109E0 /* CreateRouter.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -172,13 +189,15 @@
 			path = DataSource;
 			sourceTree = "<group>";
 		};
-		4612F2E729C2310700B20EFD /* Data */ = {
+		4612F2E729C2310700B20EFD /* DataLayer */ = {
 			isa = PBXGroup;
 			children = (
+				4623A69129C21AEA00FFAEBE /* Local */,
 				4612F2E829C2311A00B20EFD /* DatabaseError.swift */,
 				463840CF29C3179300182532 /* UserInteractor.swift */,
+				46ED29FC29C47825006109E0 /* DependencyInjection.swift */,
 			);
-			path = Data;
+			path = DataLayer;
 			sourceTree = "<group>";
 		};
 		4623A65629C17D6B00FFAEBE = {
@@ -204,9 +223,8 @@
 		4623A66129C17D6B00FFAEBE /* Twier */ = {
 			isa = PBXGroup;
 			children = (
-				4612F2E729C2310700B20EFD /* Data */,
+				46ED29F329C4714B006109E0 /* UIKit */,
 				4612F2DA29C2302400B20EFD /* Features */,
-				4623A69129C21AEA00FFAEBE /* Local */,
 				4623A66229C17D6B00FFAEBE /* TwierApp.swift */,
 				4623A66429C17D6B00FFAEBE /* ContentView.swift */,
 				4623A66629C17D6D00FFAEBE /* Assets.xcassets */,
@@ -228,8 +246,9 @@
 		4623A67729C17D6D00FFAEBE /* TwierTests */ = {
 			isa = PBXGroup;
 			children = (
-				463840D229C318CC00182532 /* Repository */,
-				463840D129C318AD00182532 /* DataSource */,
+				463840DC29C3586A00182532 /* View */,
+				463840D529C31D4E00182532 /* Presenter */,
+				463840D129C318AD00182532 /* Interactor */,
 				4623A67829C17D6D00FFAEBE /* TwierTests.swift */,
 			);
 			path = TwierTests;
@@ -258,9 +277,9 @@
 		463840C229C30C9400182532 /* Post */ = {
 			isa = PBXGroup;
 			children = (
+				463840C529C30CA500182532 /* View */,
 				463840C829C30CC200182532 /* Router */,
 				463840C729C30CB000182532 /* DataSource */,
-				463840C629C30CAA00182532 /* Repository */,
 				463840C429C30CA100182532 /* Interactor */,
 				463840C329C30C9B00182532 /* Presenter */,
 			);
@@ -270,7 +289,7 @@
 		463840C329C30C9B00182532 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				463840C529C30CA500182532 /* View */,
+				46ED29F829C473F0006109E0 /* TwierPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -286,16 +305,9 @@
 		463840C529C30CA500182532 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				46ED29F629C472D8006109E0 /* TwierView.swift */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		463840C629C30CAA00182532 /* Repository */ = {
-			isa = PBXGroup;
-			children = (
-				463840CB29C313B400182532 /* PostRepository.swift */,
-			);
-			path = Repository;
 			sourceTree = "<group>";
 		};
 		463840C729C30CB000182532 /* DataSource */ = {
@@ -308,24 +320,85 @@
 		463840C829C30CC200182532 /* Router */ = {
 			isa = PBXGroup;
 			children = (
+				46ED29FA29C4743F006109E0 /* TwierRouter.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
 		};
-		463840D129C318AD00182532 /* DataSource */ = {
+		463840D129C318AD00182532 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
-				463840BE29C2A7AA00182532 /* CreateLocalDataSourceTests.swift */,
-				463840C029C2A82900182532 /* UserLocalDataSourceTests.swift */,
+				463840BE29C2A7AA00182532 /* CreateInteractorTests.swift */,
+				463840C029C2A82900182532 /* UserInteractorTests.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		463840D529C31D4E00182532 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				463840D829C31D7E00182532 /* CreatePresenterTests.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		463840DC29C3586A00182532 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				463840DD29C3589400182532 /* CreateViewTests.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		46ED29E729C45C78006109E0 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				46ED29F129C470AE006109E0 /* UserDefaults */,
+				46ED29EB29C45CFE006109E0 /* Interactor */,
+				46ED29E829C45C7D006109E0 /* DataSource */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		46ED29E829C45C7D006109E0 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				46ED29E929C45CAF006109E0 /* UserLocalDataSource.swift */,
 			);
 			path = DataSource;
 			sourceTree = "<group>";
 		};
-		463840D229C318CC00182532 /* Repository */ = {
+		46ED29EB29C45CFE006109E0 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
+				46ED29EC29C45E46006109E0 /* UserRepository.swift */,
 			);
-			path = Repository;
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		46ED29F129C470AE006109E0 /* UserDefaults */ = {
+			isa = PBXGroup;
+			children = (
+				46ED29EF29C46ED7006109E0 /* UserSession.swift */,
+			);
+			path = UserDefaults;
+			sourceTree = "<group>";
+		};
+		46ED29F229C47140006109E0 /* UILayer */ = {
+			isa = PBXGroup;
+			children = (
+				46ED29F429C47169006109E0 /* PhotoPicker.swift */,
+			);
+			path = UILayer;
+			sourceTree = "<group>";
+		};
+		46ED29F329C4714B006109E0 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				46ED29F229C47140006109E0 /* UILayer */,
+				4612F2E729C2310700B20EFD /* DataLayer */,
+			);
+			path = UIKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -458,16 +531,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46ED29F929C473F0006109E0 /* TwierPresenter.swift in Sources */,
+				46ED29F729C472D8006109E0 /* TwierView.swift in Sources */,
+				46ED29FF29C47B97006109E0 /* CreateRouter.swift in Sources */,
+				46ED29ED29C45E46006109E0 /* UserRepository.swift in Sources */,
+				46C2F77329C3EF6F00787DA5 /* CreateView.swift in Sources */,
+				46ED29EA29C45CAF006109E0 /* UserLocalDataSource.swift in Sources */,
+				46ED29F029C46ED7006109E0 /* UserSession.swift in Sources */,
 				463840CA29C3137A00182532 /* PostInteractor.swift in Sources */,
 				4612F2E529C230C100B20EFD /* CreateLocalDataSourceImpl.swift in Sources */,
+				463840DB29C3566C00182532 /* CreatePresenter.swift in Sources */,
 				463840D029C3179300182532 /* UserInteractor.swift in Sources */,
+				46ED29F529C47169006109E0 /* PhotoPicker.swift in Sources */,
 				4623A66C29C17D6D00FFAEBE /* Persistence.swift in Sources */,
 				4623A66F29C17D6D00FFAEBE /* Twier.xcdatamodeld in Sources */,
 				4623A66529C17D6B00FFAEBE /* ContentView.swift in Sources */,
 				4612F2E929C2311A00B20EFD /* DatabaseError.swift in Sources */,
-				4612F2EB29C231CB00B20EFD /* CreateRepository.swift in Sources */,
-				463840CC29C313B400182532 /* PostRepository.swift in Sources */,
 				463840CE29C314EF00182532 /* CreateInteractor.swift in Sources */,
+				46ED29FD29C47825006109E0 /* DependencyInjection.swift in Sources */,
+				46ED29FB29C4743F006109E0 /* TwierRouter.swift in Sources */,
 				4623A66329C17D6B00FFAEBE /* TwierApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -476,9 +558,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				463840BF29C2A7AA00182532 /* CreateLocalDataSourceTests.swift in Sources */,
+				463840D929C31D7E00182532 /* CreatePresenterTests.swift in Sources */,
+				463840DE29C3589400182532 /* CreateViewTests.swift in Sources */,
+				463840BF29C2A7AA00182532 /* CreateInteractorTests.swift in Sources */,
 				4623A67929C17D6D00FFAEBE /* TwierTests.swift in Sources */,
-				463840C129C2A82900182532 /* UserLocalDataSourceTests.swift in Sources */,
+				463840C129C2A82900182532 /* UserInteractorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

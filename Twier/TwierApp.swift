@@ -11,8 +11,9 @@ struct TwierApp: App {
   
   var body: some Scene {
     WindowGroup {
-      ContentView()
+      TwierView()
         .environment(\.managedObjectContext, persistenceController.container.viewContext)
+        .environmentObject(TwierPresenter(router: DependencyInjection.shared.provideTwierRouter()))
         .onAppear{
           print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first ?? "")
         }

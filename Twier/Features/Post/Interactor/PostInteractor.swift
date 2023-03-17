@@ -13,12 +13,6 @@ protocol PostInteractor {
 
 struct PostInteractorImpl: PostInteractor {
   
-  let repository: PostRepository
-  
-  init(repository: PostRepository) {
-    self.repository = repository
-  }
-  
   func readPosts() -> AnyPublisher<[Post], DatabaseError> {
     return Future<[Post], DatabaseError> { completion in
       completion(.failure(.init()))

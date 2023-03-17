@@ -1,5 +1,5 @@
 //
-//  CreateUserTests.swift
+//  UserInteractorTests.swift
 //  TwierTests
 //
 //
@@ -9,7 +9,7 @@ import XCTest
 import Combine
 import CoreData
 
-final class UserLocalDataSourceTests: XCTestCase {
+final class UserInteractorTests: XCTestCase {
   
   var sut: UserLocalDataSource!
   var subscriptions = Set<AnyCancellable>()
@@ -24,7 +24,7 @@ final class UserLocalDataSourceTests: XCTestCase {
     var isError: Bool = false
     
     //when
-    sut.createUser(name: "Ilham", username: "ilham99")
+    sut.createUser(name: "Dio", username: "dio99")
       .receive(on: DispatchQueue.global(qos: .userInteractive))
       .sink { completion in
         switch completion {
@@ -44,7 +44,7 @@ final class UserLocalDataSourceTests: XCTestCase {
     XCTAssertFalse(isError)
   }
   
-  func test_readDataFromCoreData() {
+  func test_readUserFromCoreDataAndReturnSpesificUser() {
     //given
     let context = PersistenceController.shared.container.viewContext
     sut = MockUserLocalDataSourceImpl(context: context)
@@ -61,14 +61,24 @@ final class UserLocalDataSourceTests: XCTestCase {
     
   }
   
-}
-
-protocol UserLocalDataSource {
-  func createUser(name: String, username: String) -> AnyPublisher<Bool, DatabaseError>
+  func test_readAllUserDataFromCoreData() {
+    //given
+    let context = PersistenceController.shared.container.viewContext
+    sut = MockUserLocalDataSourceImpl(context: context)
+    
+    //when
+    let fetchRequest = User.fetchRequest()
+    let user = try? context.fetch(fetchRequest)
+    
+    //then
+    XCTAssertEqual(user?.count, 2)
+    
+  }
+  
 }
 
 struct MockUserLocalDataSourceImpl: UserLocalDataSource {
-  
+ 
   let context: NSManagedObjectContext
   
   init(context: NSManagedObjectContext) {
@@ -89,6 +99,14 @@ struct MockUserLocalDataSourceImpl: UserLocalDataSource {
       }
       
     }.eraseToAnyPublisher()
+  }
+  
+  func readUser() -> AnyPublisher<[Twier.User], Twier.DatabaseError> {
+    fatalError()
+  }
+  
+  func readUser(by username: String) -> AnyPublisher<Twier.User, Twier.DatabaseError> {
+    fatalError()
   }
   
 }
