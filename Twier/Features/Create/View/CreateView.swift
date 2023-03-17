@@ -50,6 +50,7 @@ struct CreateView: View {
           Text("Submit")
         }
         .frame(maxWidth: .infinity)
+        .disabled(!presenter.isActive)
         
       }
       
@@ -57,6 +58,13 @@ struct CreateView: View {
     .sheet(isPresented: $isPresented) {
       PhotoPicker(pickerResult: $presenter.image,
                   isPresented: $isPresented)
+    }
+    .alert(isPresented: $presenter.presentError) {
+      Alert(
+        title: Text("Error"),
+        message: Text(presenter.errorMessage),
+        dismissButton: .destructive(Text("Ok"))
+      )
     }
     
   }

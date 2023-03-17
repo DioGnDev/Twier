@@ -46,7 +46,7 @@ struct FakeCreateInteractorImpl: CreateInteractor {
                   text: String,
                   image: Data?) -> AnyPublisher<Bool, DatabaseError> {
     return Future<Bool, DatabaseError> { completion in
-      completion(.success(true))
+      completion(.failure(.init()))
     }.eraseToAnyPublisher()
   }
   

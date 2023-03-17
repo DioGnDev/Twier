@@ -21,6 +21,8 @@ class CreatePresenter: ObservableObject {
   @Published var text: String = ""
   @Published var image: UIImage? = nil
   @Published var isSuccess: Bool = false
+  @Published var isActive: Bool = false
+  @Published var presentError: Bool = false
   
   var subscriptions = Set<AnyCancellable>()
   
@@ -31,6 +33,9 @@ class CreatePresenter: ObservableObject {
     self.interactor = interactor
     self.userSession = userSession
     self.router = router
+    
+    bindToView()
+    
   }
   
   func create(completion: @escaping () -> Void) {
@@ -46,6 +51,7 @@ class CreatePresenter: ObservableObject {
     .sink { [weak self] completion in
       switch completion {
       case .failure(let error):
+        self?.presentError.toggle()
         self?.errorMessage = error.localizedDescription
         break
       case .finished:
@@ -62,6 +68,18 @@ class CreatePresenter: ObservableObject {
     
   }
   
+  private var isFormValid: AnyPublisher<Bool, Never> {
+    Publishers.CombineLatest($text, $image)
+      .map { txt, img in
+        return !txt.isEmpty && img != nil
+      }
+      .eraseToAnyPublisher()
+  }
   
+  private func bindToView(){
+    isFormValid
+      .receive(on: DispatchQueue.main)
+      .assign(to: &$isActive)
+  }
   
 }
