@@ -4,13 +4,25 @@
 //
 
 import SwiftUI
+import Combine
 
 struct BottomSheet: View {
   
-  let users: [User]
+  @State var offset: CGFloat = 0
   @Binding var showSheet: Bool
-  @State var offset : CGFloat = 0
-  @Binding var selectedUser: String
+  @Binding var selectedUser: UserModel
+  
+  let users: [User]
+  var subscriptions = Set<AnyCancellable>()
+  
+  init(users: [User],
+       showSheet: Binding<Bool>,
+       selectedUser: Binding<UserModel>) {
+    
+    self.users = users
+    self._showSheet = showSheet
+    self._selectedUser = selectedUser
+  }
   
   var body: some View {
     
@@ -33,20 +45,20 @@ struct BottomSheet: View {
             
             ForEach(users){ user in
               Button {
-                selectedUser = user.username ?? ""
+                selectedUser = UserModel(name: user.name ?? "",
+                                         username: user.username ?? "")
                 withAnimation {
                   showSheet.toggle()
                 }
               } label: {
-                HStack {
-                 Image(systemName: "person.circle.fill")
+                HStack(alignment: .bottom) {
+                  Image(systemName: "person.circle.fill")
                     .resizable()
                     .frame(width: 30, height: 30)
                   Text(user.name ?? "")
                 }
-                .frame(height: 40)
+                
               }
-
             }
           }
           .padding(.horizontal)

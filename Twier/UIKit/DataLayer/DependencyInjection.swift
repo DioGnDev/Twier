@@ -39,4 +39,9 @@ struct DependencyInjection {
   public func provideUserSession() -> UserSession {
     return UserSession()
   }
+  
+  public func provideUserInteractor() -> UserInteractor {
+    return UserInteractorImpl(repository: provideUserRepository())
+  }
+  
 }

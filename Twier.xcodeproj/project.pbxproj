@@ -11,6 +11,10 @@
 		460168A729C5FA7E005290CA /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460168A629C5FA7E005290CA /* BlurView.swift */; };
 		460168A929C5FACF005290CA /* CustomShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460168A829C5FACF005290CA /* CustomShape.swift */; };
 		460168AB29C5FAE1005290CA /* CustomCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460168AA29C5FAE1005290CA /* CustomCorner.swift */; };
+		460168AD29C618CE005290CA /* UserInteractorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460168AC29C618CE005290CA /* UserInteractorImpl.swift */; };
+		460168AF29C62562005290CA /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460168AE29C62562005290CA /* UserModel.swift */; };
+		460168B129C62A60005290CA /* PagerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460168B029C62A60005290CA /* PagerHelper.swift */; };
+		460168B329C62A88005290CA /* OffsetTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460168B229C62A88005290CA /* OffsetTabView.swift */; };
 		4612F2E529C230C100B20EFD /* CreateLocalDataSourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4612F2E429C230C100B20EFD /* CreateLocalDataSourceImpl.swift */; };
 		4612F2E929C2311A00B20EFD /* DatabaseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4612F2E829C2311A00B20EFD /* DatabaseError.swift */; };
 		4623A66329C17D6B00FFAEBE /* TwierApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4623A66229C17D6B00FFAEBE /* TwierApp.swift */; };
@@ -64,6 +68,10 @@
 		460168A629C5FA7E005290CA /* BlurView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
 		460168A829C5FACF005290CA /* CustomShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomShape.swift; sourceTree = "<group>"; };
 		460168AA29C5FAE1005290CA /* CustomCorner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCorner.swift; sourceTree = "<group>"; };
+		460168AC29C618CE005290CA /* UserInteractorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInteractorImpl.swift; sourceTree = "<group>"; };
+		460168AE29C62562005290CA /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		460168B029C62A60005290CA /* PagerHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagerHelper.swift; sourceTree = "<group>"; };
+		460168B229C62A88005290CA /* OffsetTabView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OffsetTabView.swift; sourceTree = "<group>"; };
 		4612F2E429C230C100B20EFD /* CreateLocalDataSourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateLocalDataSourceImpl.swift; sourceTree = "<group>"; };
 		4612F2E829C2311A00B20EFD /* DatabaseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseError.swift; sourceTree = "<group>"; };
 		4623A65F29C17D6B00FFAEBE /* Twier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Twier.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -204,6 +212,7 @@
 				4612F2E829C2311A00B20EFD /* DatabaseError.swift */,
 				463840CF29C3179300182532 /* UserInteractor.swift */,
 				46ED29FC29C47825006109E0 /* DependencyInjection.swift */,
+				460168AE29C62562005290CA /* UserModel.swift */,
 			);
 			path = DataLayer;
 			sourceTree = "<group>";
@@ -380,6 +389,7 @@
 			isa = PBXGroup;
 			children = (
 				46ED29EC29C45E46006109E0 /* UserRepository.swift */,
+				460168AC29C618CE005290CA /* UserInteractorImpl.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -395,6 +405,8 @@
 		46ED29F229C47140006109E0 /* UILayer */ = {
 			isa = PBXGroup;
 			children = (
+				460168B229C62A88005290CA /* OffsetTabView.swift */,
+				460168B029C62A60005290CA /* PagerHelper.swift */,
 				460168AA29C5FAE1005290CA /* CustomCorner.swift */,
 				460168A829C5FACF005290CA /* CustomShape.swift */,
 				460168A629C5FA7E005290CA /* BlurView.swift */,
@@ -554,16 +566,20 @@
 				4612F2E529C230C100B20EFD /* CreateLocalDataSourceImpl.swift in Sources */,
 				460168AB29C5FAE1005290CA /* CustomCorner.swift in Sources */,
 				463840DB29C3566C00182532 /* CreatePresenter.swift in Sources */,
+				460168B329C62A88005290CA /* OffsetTabView.swift in Sources */,
 				463840D029C3179300182532 /* UserInteractor.swift in Sources */,
 				46ED29F529C47169006109E0 /* PhotoPicker.swift in Sources */,
+				460168B129C62A60005290CA /* PagerHelper.swift in Sources */,
 				4623A66C29C17D6D00FFAEBE /* Persistence.swift in Sources */,
 				4623A66F29C17D6D00FFAEBE /* Twier.xcdatamodeld in Sources */,
 				4623A66529C17D6B00FFAEBE /* ContentView.swift in Sources */,
 				460168A729C5FA7E005290CA /* BlurView.swift in Sources */,
 				4612F2E929C2311A00B20EFD /* DatabaseError.swift in Sources */,
+				460168AF29C62562005290CA /* UserModel.swift in Sources */,
 				460168A529C5FA31005290CA /* BottomSheet.swift in Sources */,
 				463840CE29C314EF00182532 /* CreateInteractor.swift in Sources */,
 				46ED29FD29C47825006109E0 /* DependencyInjection.swift in Sources */,
+				460168AD29C618CE005290CA /* UserInteractorImpl.swift in Sources */,
 				460168A929C5FACF005290CA /* CustomShape.swift in Sources */,
 				46ED29FB29C4743F006109E0 /* TwierRouter.swift in Sources */,
 				4623A66329C17D6B00FFAEBE /* TwierApp.swift in Sources */,

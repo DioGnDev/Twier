@@ -29,8 +29,10 @@ struct TwierView: View {
                   Image(systemName: "person.circle.fill")
                     .resizable()
                     .frame(width: 25, height: 25)
-                  Text(presenter.userName)
+                  
+                  Text(presenter.name)
                 }
+                .foregroundColor(Color.black)
               }
               
               Spacer()
@@ -55,6 +57,7 @@ struct TwierView: View {
         }
         .onAppear{
           presenter.getUser()
+          presenter.readUsers()
           showBottomSheet = false
         }
         
@@ -77,6 +80,7 @@ struct TwierView_Previews: PreviewProvider {
       .environmentObject(
         TwierPresenter(
           interactor: DependencyInjection.shared.provideTwierInteractor(),
+          userInteractor: DependencyInjection.shared.provideUserInteractor(),
           router: DependencyInjection.shared.provideTwierRouter(),
           userSession: DependencyInjection.shared.provideUserSession()
         )

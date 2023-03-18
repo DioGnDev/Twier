@@ -16,6 +16,7 @@ struct TwierApp: App {
         .environmentObject(
           TwierPresenter(
             interactor: DependencyInjection.shared.provideTwierInteractor(),
+            userInteractor: DependencyInjection.shared.provideUserInteractor(),
             router: DependencyInjection.shared.provideTwierRouter(),
             userSession: DependencyInjection.shared.provideUserSession()
           )
