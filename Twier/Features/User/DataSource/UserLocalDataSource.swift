@@ -12,6 +12,7 @@ protocol UserLocalDataSource {
   func createUser(name: String, username: String) -> AnyPublisher<Bool, DatabaseError>
   func readUser() -> AnyPublisher<[User], DatabaseError>
   func readUser(by username: String) -> AnyPublisher<User, DatabaseError>
+  func deleteUser() -> AnyPublisher<Bool, DatabaseError>
 }
 
 struct UserLocalDataSourceImpl: UserLocalDataSource {
@@ -68,6 +69,10 @@ struct UserLocalDataSourceImpl: UserLocalDataSource {
         completion(.failure(.init()))
       }
     }.eraseToAnyPublisher()
+  }
+  
+  func deleteUser() -> AnyPublisher<Bool, DatabaseError> {
+    fatalError()
   }
   
 }

@@ -19,7 +19,9 @@ final class CreateViewTests: XCTestCase {
     let interactor = MockCreateInteractorImpl(dataSource: datasource)
     
     //when
-    sut = CreatePresenter(interactor: interactor)
+    sut = CreatePresenter(interactor: interactor,
+                          userSession: UserSession(),
+                          router: CreateRouter())
     
     //then
     XCTAssertFalse(sut.isLoading)
@@ -31,10 +33,12 @@ final class CreateViewTests: XCTestCase {
     let datasource = MockCreateLocalDataSourceFailed()
     let interactor = MockCreateInteractorImpl(dataSource: datasource)
     let expectation = expectation(description: "promise...")
-    sut = CreatePresenter(interactor: interactor)
+    sut = CreatePresenter(interactor: interactor,
+                          userSession: UserSession(),
+                          router: CreateRouter())
     
     //when
-    sut.create()
+    sut.create(completion: {})
     
     DispatchQueue.main.asyncAfter(deadline: .now() + 3){
       expectation.fulfill()

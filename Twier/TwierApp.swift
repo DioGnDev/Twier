@@ -13,7 +13,13 @@ struct TwierApp: App {
     WindowGroup {
       TwierView()
         .environment(\.managedObjectContext, persistenceController.container.viewContext)
-        .environmentObject(TwierPresenter(router: DependencyInjection.shared.provideTwierRouter()))
+        .environmentObject(
+          TwierPresenter(
+            interactor: DependencyInjection.shared.provideTwierInteractor(),
+            router: DependencyInjection.shared.provideTwierRouter(),
+            userSession: DependencyInjection.shared.provideUserSession()
+          )
+        )
         .onAppear{
           print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first ?? "")
         }

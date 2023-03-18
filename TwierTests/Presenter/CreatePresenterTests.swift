@@ -95,7 +95,7 @@ struct MockCreateInteractorImpl: CreateInteractor {
     self.dataSource = dataSource
   }
   
-  func createPost(username: String,
+  func createPost(username: String?,
                   text: String,
                   image: Data?) -> AnyPublisher<Bool, Twier.DatabaseError> {
     

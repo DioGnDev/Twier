@@ -88,7 +88,8 @@ final class CreateInteractorTests: XCTestCase {
 }
 
 struct MockCreateLocalDataSourceFailed: CreateLocalDataSource {
-  func createPost(username: String,
+  
+  func createPost(username: String?,
                   text: String,
                   image: Data?) -> AnyPublisher<Bool, DatabaseError> {
     
@@ -109,11 +110,16 @@ struct MockCreateLocalDataSourceImpl: CreateLocalDataSource {
     self.context = context
   }
   
-  func createPost(username: String,
+  func createPost(username: String?,
                   text: String,
                   image: Data?) -> AnyPublisher<Bool, DatabaseError> {
     
     return Future<Bool, DatabaseError> { completion in
+      
+      guard let username = username else {
+        completion(.failure(.init()))
+        return
+      }
       
       let userFetchRequest = User.fetchRequest()
       let predicate = NSPredicate(format: "username == %@", username)
