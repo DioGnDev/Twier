@@ -14,6 +14,8 @@ struct TwierView: View {
   @State var showBottomSheet: Bool = false
   @State var currentSelection: Int = 0
   @State var posts: [Post] = []
+  @State var tabOffset: CGFloat = 0
+  var maxTabs: CGFloat = 2
   
   var body: some View {
     NavigationView {
@@ -38,7 +40,7 @@ struct TwierView: View {
                     .foregroundColor(Color.white)
                     .shadow(color: Color.red, radius: 5)
                   
-                  Text(presenter.name)
+                  Text(UserSession.shared.username ?? "")
                 }
                 .foregroundColor(Color.black)
               }
@@ -46,31 +48,67 @@ struct TwierView: View {
               Spacer()
               
               presenter.linkBuilder {
-                Label("", systemImage: "plus")
+                Label("Add", systemImage: "plus")
                   .foregroundColor(Color("PrimaryColor"))
                   .shadow(color: Color("PrimaryColor").opacity(0.3), radius: 5)
               }
             }
             .padding(.horizontal, 16)
           }
-          .frame(height: 65)
+          .frame(height: 50)
           
-          HStack {
+          VStack {
+            HStack {
+              Text("My Posts")
+                .frame(maxWidth: .infinity)
+                .onTapGesture {
+                  withAnimation {
+                    currentSelection = 0
+                    tabOffset = 0
+                  }
+                }
+              Text("All Posts")
+                .frame(maxWidth: .infinity)
+                .onTapGesture {
+                  withAnimation {
+                    currentSelection = 1
+                    tabOffset = getScreenBounds().width / maxTabs
+                  }
+                }
+            }
+            .frame(maxWidth: .infinity, maxHeight: 45)
+            .padding(.horizontal, 20)
             
+            // Indicator...
+            Capsule()
+              .fill(Color("PrimaryColor"))
+              .frame(width: maxTabs == 0 ? 0 : (getScreenBounds().width / maxTabs), height: 5)
+              .frame(maxWidth: .infinity, alignment: .leading)
+              .offset(x: tabOffset)
+            
+            TabView(selection: $currentSelection) {
+              MyPostView(items: $presenter.posts)
+                .tag(0)
+                .onAppear{ presenter.readPosts() }
+              
+              AllPostView(items: $presenter.allPosts)
+                .tag(1)
+                .onAppear{ presenter.readAllPost() }
+              
+            }
+            .tabViewStyle(.page(indexDisplayMode: .never))
+            .onChange(of: currentSelection) { newValue in
+              withAnimation {
+                tabOffset = newValue == 0 ? 0 : getScreenBounds().width / maxTabs
+              }
+            }
+              
           }
-          
-          TabView {
-            MyPostView(items: $presenter.posts)
-              .onAppear{ presenter.readPosts() }
-            
-            AllPostView(items: $presenter.allPosts)
-              .onAppear{ presenter.readAllPost() }
-            
-          }.tabViewStyle(.page(indexDisplayMode: .never))
           
         }
         
         BottomSheet(
+          userSession: UserSession.shared,
           users: presenter.users,
           showSheet: $showBottomSheet,
           selectedUser: $presenter.selectedUser

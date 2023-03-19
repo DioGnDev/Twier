@@ -19,7 +19,7 @@ struct RowView: View {
       Circle()
         .foregroundColor(Color("PrimaryColor"))
         .overlay {
-          Text(String(describing: name.first?.uppercased()))
+          Text(String(describing: name.first?.uppercased() ?? ""))
             .foregroundColor(Color.white)
         }
         .frame(width: 30, height: 30)
