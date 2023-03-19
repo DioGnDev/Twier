@@ -19,6 +19,9 @@
 		460168B729C6B5B1005290CA /* PostLocalDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460168B629C6B5B1005290CA /* PostLocalDatasource.swift */; };
 		460168B929C6BE38005290CA /* TwierViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460168B829C6BE38005290CA /* TwierViewTests.swift */; };
 		460168BB29C6E9E3005290CA /* PageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460168BA29C6E9E3005290CA /* PageView.swift */; };
+		46076D5D29C707AB00DC81FB /* MyPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46076D5C29C707AB00DC81FB /* MyPostView.swift */; };
+		46076D5F29C707FF00DC81FB /* AllPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46076D5E29C707FF00DC81FB /* AllPostView.swift */; };
+		46076D6129C70B1400DC81FB /* RowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46076D6029C70B1400DC81FB /* RowView.swift */; };
 		4612F2E529C230C100B20EFD /* CreateLocalDataSourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4612F2E429C230C100B20EFD /* CreateLocalDataSourceImpl.swift */; };
 		4612F2E929C2311A00B20EFD /* DatabaseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4612F2E829C2311A00B20EFD /* DatabaseError.swift */; };
 		4623A66329C17D6B00FFAEBE /* TwierApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4623A66229C17D6B00FFAEBE /* TwierApp.swift */; };
@@ -80,6 +83,9 @@
 		460168B629C6B5B1005290CA /* PostLocalDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostLocalDatasource.swift; sourceTree = "<group>"; };
 		460168B829C6BE38005290CA /* TwierViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwierViewTests.swift; sourceTree = "<group>"; };
 		460168BA29C6E9E3005290CA /* PageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageView.swift; sourceTree = "<group>"; };
+		46076D5C29C707AB00DC81FB /* MyPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPostView.swift; sourceTree = "<group>"; };
+		46076D5E29C707FF00DC81FB /* AllPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllPostView.swift; sourceTree = "<group>"; };
+		46076D6029C70B1400DC81FB /* RowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowView.swift; sourceTree = "<group>"; };
 		4612F2E429C230C100B20EFD /* CreateLocalDataSourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateLocalDataSourceImpl.swift; sourceTree = "<group>"; };
 		4612F2E829C2311A00B20EFD /* DatabaseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseError.swift; sourceTree = "<group>"; };
 		4623A65F29C17D6B00FFAEBE /* Twier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Twier.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -331,6 +337,9 @@
 			isa = PBXGroup;
 			children = (
 				46ED29F629C472D8006109E0 /* TwierView.swift */,
+				46076D5C29C707AB00DC81FB /* MyPostView.swift */,
+				46076D5E29C707FF00DC81FB /* AllPostView.swift */,
+				46076D6029C70B1400DC81FB /* RowView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -570,8 +579,10 @@
 				46ED29F929C473F0006109E0 /* TwierPresenter.swift in Sources */,
 				46ED29F729C472D8006109E0 /* TwierView.swift in Sources */,
 				46ED29FF29C47B97006109E0 /* CreateRouter.swift in Sources */,
+				46076D5D29C707AB00DC81FB /* MyPostView.swift in Sources */,
 				46ED29ED29C45E46006109E0 /* UserRepository.swift in Sources */,
 				46C2F77329C3EF6F00787DA5 /* CreateView.swift in Sources */,
+				46076D5F29C707FF00DC81FB /* AllPostView.swift in Sources */,
 				46ED29EA29C45CAF006109E0 /* UserLocalDataSource.swift in Sources */,
 				46ED29F029C46ED7006109E0 /* UserSession.swift in Sources */,
 				463840CA29C3137A00182532 /* TwierInteractor.swift in Sources */,
@@ -584,6 +595,7 @@
 				460168B129C62A60005290CA /* PagerHelper.swift in Sources */,
 				4623A66C29C17D6D00FFAEBE /* Persistence.swift in Sources */,
 				4623A66F29C17D6D00FFAEBE /* Twier.xcdatamodeld in Sources */,
+				46076D6129C70B1400DC81FB /* RowView.swift in Sources */,
 				460168B729C6B5B1005290CA /* PostLocalDatasource.swift in Sources */,
 				4623A66529C17D6B00FFAEBE /* ContentView.swift in Sources */,
 				460168A729C5FA7E005290CA /* BlurView.swift in Sources */,

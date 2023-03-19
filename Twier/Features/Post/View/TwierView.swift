@@ -61,8 +61,12 @@ struct TwierView: View {
           .frame(height: 65)
           
           TabView {
-            myPostView().onAppear{ presenter.readPosts() }
-            allPostView().onAppear{ presenter.readAllPost() }
+            MyPostView(items: $presenter.posts)
+              .onAppear{ presenter.readPosts() }
+            
+            AllPostView(items: $presenter.allPosts)
+              .onAppear{ presenter.readAllPost() }
+            
           }.tabViewStyle(.page(indexDisplayMode: .never))
           
         }
@@ -87,27 +91,6 @@ struct TwierView: View {
     }
     
   }
-  
-  private func userPosts() {
-    //    posts = user.first?.posts?.compactMap{$0 as? Post} ?? []
-  }
-  
-  @ViewBuilder
-  func myPostView() -> some View {
-    List(presenter.posts) { post in
-      Text(post.message ?? "")
-    }
-    .listStyle(.plain)
-  }
-  
-  @ViewBuilder
-  func allPostView() -> some View {
-    List(presenter.allPosts) { post in
-      Text(post.message ?? "")
-    }
-    .listStyle(.plain)
-  }
-  
 }
 
 struct TwierView_Previews: PreviewProvider {
