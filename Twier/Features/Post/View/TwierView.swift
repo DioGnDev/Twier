@@ -14,8 +14,8 @@ struct TwierView: View {
   @State var showBottomSheet: Bool = false
   @State var currentSelection: Int = 0
   @State var posts: [Post] = []
-  var maxTabs: CGFloat = 2
   @State var tabOffset: CGFloat = 0
+  var maxTabs: CGFloat = 2
   
   var body: some View {
     NavigationView {
@@ -40,7 +40,7 @@ struct TwierView: View {
                     .foregroundColor(Color.white)
                     .shadow(color: Color.red, radius: 5)
                   
-                  Text(presenter.name)
+                  Text(UserSession.shared.username ?? "")
                 }
                 .foregroundColor(Color.black)
               }

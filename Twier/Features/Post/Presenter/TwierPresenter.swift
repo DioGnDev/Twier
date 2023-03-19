@@ -32,8 +32,6 @@ class TwierPresenter: ObservableObject {
     self.userInteractor = userInteractor
     self.router = router
     self.userSession = userSession
-    
-    self.getUserBy()
   }
   
   var name: String {
@@ -44,46 +42,18 @@ class TwierPresenter: ObservableObject {
     return selectedUser.username
   }
   
-  func getUserBy() {
-    userInteractor.readUser(userSession.username ?? "")
+  func checkUser() {
+    interactor.checkUser()
       .receive(on: DispatchQueue.main)
       .sink { completion in
         print(completion)
-      } receiveValue: { [weak self] user in
-        self?.selectedUser = UserModel(name: user.name ?? "",
-                                       username: user.username ?? "")
+      } receiveValue: { [weak self] succeedded in
+        guard let self = self else { return }
+        self.selectedUser = UserModel(
+          name: "",
+          username: self.userSession.username ?? ""
+        )
       }.store(in: &subscriptions)
-  }
-  
-  func checkUser() {
-    interactor.checkUser()
-  }
-  
-  func getUser() {
-    
-    userSession.username
-      .publisher
-      .map{ return !$0.isEmpty }
-      .flatMap{ [weak self] _ -> AnyPublisher<[User], DatabaseError> in
-        guard let strongSelf = self
-        else {
-          return Empty(completeImmediately: true).eraseToAnyPublisher()
-        }
-        return strongSelf.interactor.readUsers()
-      }
-      .eraseToAnyPublisher()
-      .receive(on: DispatchQueue.main)
-      .sink { completion in
-        switch completion {
-        case .failure(let error):
-          print(error.localizedDescription)
-        case .finished:
-          print("finished")
-        }
-      } receiveValue: { [weak self] users in
-        self?.userSession.username = users[0].username
-      }.store(in: &subscriptions)
-    
   }
   
   func readUsers() {
