@@ -8,6 +8,8 @@ import Combine
 
 struct BottomSheet: View {
   
+  private var userSession: UserSession
+  
   @State var offset: CGFloat = 0
   @Binding var showSheet: Bool
   @Binding var selectedUser: UserModel
@@ -15,10 +17,12 @@ struct BottomSheet: View {
   let users: [User]
   var subscriptions = Set<AnyCancellable>()
   
-  init(users: [User],
+  init(userSession: UserSession,
+       users: [User],
        showSheet: Binding<Bool>,
        selectedUser: Binding<UserModel>) {
     
+    self.userSession = userSession
     self.users = users
     self._showSheet = showSheet
     self._selectedUser = selectedUser
@@ -30,34 +34,54 @@ struct BottomSheet: View {
       
       Spacer()
       
-      VStack(spacing: 12){
+      VStack(spacing: 16){
         
         Capsule()
           .fill(Color.gray)
           .frame(width: 60, height: 4)
         
         Text("Switch User")
-          .foregroundColor(.gray)
+          .font(.headline)
         
         ScrollView(.vertical, showsIndicators: false) {
           
-          VStack(spacing: 8){
+          VStack(alignment: .leading, spacing: 8) {
             
             ForEach(users){ user in
+              
               Button {
                 selectedUser = UserModel(name: user.name ?? "",
                                          username: user.username ?? "")
-                UserSession.shared.username = user.username ?? ""
+                self.userSession.setUsername(user.username ?? "")
                 withAnimation {
                   showSheet.toggle()
                 }
               } label: {
-                HStack(alignment: .bottom) {
+                
+                HStack(alignment: .bottom, spacing: 12) {
+                  
                   Image(systemName: "person.circle.fill")
                     .resizable()
                     .frame(width: 30, height: 30)
-                  Text(user.name ?? "")
+                    .foregroundColor(Color("PrimaryColor"))
+                  
+                  VStack(alignment: .leading) {
+                    Text(user.name ?? "")
+                      .font(.headline)
+                      .foregroundColor(.black)
+                    
+                    Text("@\(user.username ?? "")")
+                      .font(.subheadline)
+                      .fontWeight(.medium)
+                      .foregroundColor(Color.gray)
+                  }
+                  
+                  
+                  Spacer()
                 }
+                .frame(maxWidth: .infinity, maxHeight: 70)
+                .padding(.horizontal, 24)
+                .padding(.vertical, 5)
                 
               }
             }
@@ -69,7 +93,9 @@ struct BottomSheet: View {
         .contentShape(Rectangle())
       }
       .padding(.top)
-      .background(BlurView().clipShape(CustomCorner(corners: [.topLeft,.topRight])))
+      .background(BlurView(style: .systemMaterialLight)
+        .clipShape(CustomCorner(corners: [.topLeft, .topRight]))
+      )
       .offset(y: offset)
       // bottom sheet remove swipe gesture....
       .gesture(DragGesture().onChanged(onChanged(value:)).onEnded(onEnded(value:)))
@@ -78,7 +104,7 @@ struct BottomSheet: View {
     .ignoresSafeArea()
     .background(
       Color.black
-        .opacity(showSheet ? 0.4 : 0)
+        .opacity(showSheet ? 0.5 : 0)
         .ignoresSafeArea()
         .onTapGesture(perform: {
           withAnimation{ showSheet.toggle() }

@@ -46,7 +46,7 @@ struct TwierView: View {
               Spacer()
               
               presenter.linkBuilder {
-                Label("", systemImage: "plus")
+                Label("Add", systemImage: "plus")
                   .foregroundColor(Color("PrimaryColor"))
                   .shadow(color: Color("PrimaryColor").opacity(0.3), radius: 5)
               }
@@ -71,6 +71,7 @@ struct TwierView: View {
         }
         
         BottomSheet(
+          userSession: UserSession.shared,
           users: presenter.users,
           showSheet: $showBottomSheet,
           selectedUser: $presenter.selectedUser

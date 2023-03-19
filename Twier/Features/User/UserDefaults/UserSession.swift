@@ -19,5 +19,9 @@ struct UserSession {
       UserDefaults.standard.set(newValue, forKey: "USERNAME")
     }
   }
+  
+  public func setUsername(_ input: String) {
+    UserDefaults.standard.set(input, forKey: "USERNAME")
+  }
 
 }
