@@ -95,7 +95,7 @@ struct MockCreateLocalDataSourceFailed: CreateLocalDataSource {
     
     return Future<Bool, DatabaseError> { completion in
       
-      completion(.failure(.init()))
+      completion(.failure(.init(id: 100, message: "Database Error")))
       
     }.eraseToAnyPublisher()
     

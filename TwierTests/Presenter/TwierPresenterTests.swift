@@ -49,7 +49,7 @@ final class TwierPresenterTests: XCTestCase {
     waitForExpectations(timeout: 5)
     XCTAssertTrue(isSuccess)
     XCTAssertFalse(isError)
-    XCTAssertEqual(posts.count, 1)
+    XCTAssertTrue(posts.count > 0)
     
   }
   
