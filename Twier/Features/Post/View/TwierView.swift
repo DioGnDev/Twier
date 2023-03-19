@@ -85,7 +85,6 @@ struct TwierView: View {
               .frame(width: maxTabs == 0 ? 0 : (getScreenBounds().width / maxTabs), height: 5)
               .frame(maxWidth: .infinity, alignment: .leading)
               .offset(x: tabOffset)
-              .padding(.horizontal, currentSelection == 0 ? 10 : -10)
             
             TabView(selection: $currentSelection) {
               MyPostView(items: $presenter.posts)
