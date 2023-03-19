@@ -17,9 +17,10 @@ extension Post {
   @NSManaged public var image: Data?
   @NSManaged public var message: String?
   @NSManaged public var user: User?
-  
 }
 
 extension Post : Identifiable {
+  
+  
   
 }

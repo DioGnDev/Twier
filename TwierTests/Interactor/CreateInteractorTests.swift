@@ -1,5 +1,5 @@
 //
-//  CreateLocalDataSourceTests.swift
+//  CreateInteractorTests.swift
 //  TwierTests
 //
 //
@@ -9,7 +9,7 @@ import XCTest
 import Combine
 import CoreData
 
-final class CreateLocalDataSourceTests: XCTestCase {
+final class CreateInteractorTests: XCTestCase {
   
   var sut: CreateLocalDataSource!
   var subscriptions = Set<AnyCancellable>()
@@ -18,7 +18,6 @@ final class CreateLocalDataSourceTests: XCTestCase {
     //given
     sut = MockCreateLocalDataSourceFailed()
     
-    let context = PersistenceController.shared.container.viewContext
     let expectation = expectation(description: "Promise...")
     let text = "Okay Apple ... i need your help!!!"
     
@@ -26,10 +25,9 @@ final class CreateLocalDataSourceTests: XCTestCase {
     var nerror: Bool = false
     
     //when
-    sut.createPost(username: "diiyo99",
+    sut.createPost(username: "ilham99",
                    text: text,
-                   image: Data(),
-                   context: context)
+                   image: Data())
     .receive(on: DispatchQueue.global(qos: .userInteractive))
     .sink { completion in
       switch completion {
@@ -53,8 +51,6 @@ final class CreateLocalDataSourceTests: XCTestCase {
   
   func test_saveToLocalDataAndReturnSuccess() {
     //given
-    sut = MockCreateLocalDataSourceImpl()
-    
     let context = PersistenceController.shared.container.viewContext
     let expectation = expectation(description: "Promise...")
     let text = "Okay Amazon ... i need your help!!! I'm still less than a year into investing, but haven't been able to find a mentor.. suggestions?"
@@ -62,11 +58,12 @@ final class CreateLocalDataSourceTests: XCTestCase {
     var success: Bool = false
     var nerror: Bool = false
     
+    sut = MockCreateLocalDataSourceImpl(context: context)
+    
     //when
     sut.createPost(username: "ilham99",
                    text: text,
-                   image: Data(),
-                   context: context)
+                   image: Data())
     .receive(on: DispatchQueue.global(qos: .userInteractive))
     .sink { completion in
       switch completion {
@@ -91,10 +88,10 @@ final class CreateLocalDataSourceTests: XCTestCase {
 }
 
 struct MockCreateLocalDataSourceFailed: CreateLocalDataSource {
-  func createPost(username: String,
+  
+  func createPost(username: String?,
                   text: String,
-                  image: Data?,
-                  context: NSManagedObjectContext) -> AnyPublisher<Bool, DatabaseError> {
+                  image: Data?) -> AnyPublisher<Bool, DatabaseError> {
     
     return Future<Bool, DatabaseError> { completion in
       
@@ -107,12 +104,22 @@ struct MockCreateLocalDataSourceFailed: CreateLocalDataSource {
 
 struct MockCreateLocalDataSourceImpl: CreateLocalDataSource {
   
-  func createPost(username: String,
+  let context: NSManagedObjectContext
+  
+  init(context: NSManagedObjectContext) {
+    self.context = context
+  }
+  
+  func createPost(username: String?,
                   text: String,
-                  image: Data?,
-                  context: NSManagedObjectContext) -> AnyPublisher<Bool, DatabaseError> {
+                  image: Data?) -> AnyPublisher<Bool, DatabaseError> {
     
     return Future<Bool, DatabaseError> { completion in
+      
+      guard let username = username else {
+        completion(.failure(.init()))
+        return
+      }
       
       let userFetchRequest = User.fetchRequest()
       let predicate = NSPredicate(format: "username == %@", username)
