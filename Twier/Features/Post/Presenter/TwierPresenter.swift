@@ -104,6 +104,7 @@ class TwierPresenter: ObservableObject {
   
   func readAllPost() {
     interactor.readPosts()
+      .receive(on: DispatchQueue.global(qos: .userInteractive))
       .sink { [weak self] completion in
         switch completion {
         case .failure(let error):
@@ -124,7 +125,7 @@ class TwierPresenter: ObservableObject {
         guard let strongSelf = self else { return Empty(completeImmediately: true).eraseToAnyPublisher() }
         return strongSelf.interactor.readPosts(by: username)
       }
-      .receive(on: DispatchQueue.main)
+      .receive(on: DispatchQueue.global(qos: .userInteractive))
       .sink { [weak self] completion in
         switch completion {
         case .failure(let error):
