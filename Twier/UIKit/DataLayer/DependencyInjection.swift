@@ -21,7 +21,7 @@ struct DependencyInjection {
   }
   
   public func provideInteractor() -> CreateInteractor {
-    return FakeCreateInteractorImpl(datasource: provideCreateLocalData())
+    return CreateInteractorImpl(dataSource: provideCreateLocalData())
   }
   
   public func provideTwierRouter() -> TwierRouter {
@@ -32,8 +32,14 @@ struct DependencyInjection {
     return TwierUserRepository(localDatasource: provideUserLocalDatasource())
   }
   
-  public func provideTwierInteractor() -> TwierInteractor {
-    return TwierInteractorImpl(userRepository: provideUserRepository())
+  public func providePostLocalDatasource() -> PostLocalDatasource {
+    let context = PersistenceController.shared.container.viewContext
+    return PostLocalDatasourceImpl(context: context)
+  }
+  
+  public func provideTwierInteractor() -> TwierInteractor & PostInteractor {
+    return TwierInteractorImpl(userRepository: provideUserRepository(),
+                               postDatasource: providePostLocalDatasource())
   }
   
   public func provideUserSession() -> UserSession {

@@ -9,6 +9,7 @@ import Combine
 
 protocol PostInteractor {
   func readPosts() -> AnyPublisher<[Post], DatabaseError>
+  func readPosts(by username: String) -> AnyPublisher<[Post], DatabaseError>
 }
 
 protocol TwierInteractor {
@@ -20,11 +21,15 @@ protocol TwierInteractor {
 class TwierInteractorImpl: TwierInteractor, PostInteractor {
   
   let userRepository: UserRepository
+  let postDatasource: PostLocalDatasource
   
   var subscriptions = Set<AnyCancellable>()
   
-  init(userRepository: UserRepository) {
+  init(userRepository: UserRepository,
+       postDatasource: PostLocalDatasource) {
+    
     self.userRepository = userRepository
+    self.postDatasource = postDatasource
   }
   
   func checkUser(){
@@ -64,14 +69,21 @@ class TwierInteractorImpl: TwierInteractor, PostInteractor {
         }.store(in: &subscriptions)
       
     }
+    
+    UserSession.shared.username = user1.username
+    
   }
   
   func readPosts() -> AnyPublisher<[Post], DatabaseError> {
-    fatalError()
+    return postDatasource.readPosts().eraseToAnyPublisher()
+  }
+  
+  func readPosts(by username: String) -> AnyPublisher<[Post], DatabaseError> {
+    return postDatasource.readPosts(by: username).eraseToAnyPublisher()
   }
   
   func readUsers() -> AnyPublisher<[User], DatabaseError> {
-    return userRepository.getUsers()
+    return userRepository.getUsers().eraseToAnyPublisher()
   }
   
 }

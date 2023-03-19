@@ -47,6 +47,7 @@ struct BottomSheet: View {
               Button {
                 selectedUser = UserModel(name: user.name ?? "",
                                          username: user.username ?? "")
+                UserSession.shared.username = user.username ?? ""
                 withAnimation {
                   showSheet.toggle()
                 }

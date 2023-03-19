@@ -5,19 +5,34 @@
 //
 
 import SwiftUI
+import CoreData
 
 struct TwierView: View {
   
+  //Core Data
+  //  @Environment(\.managedObjectContext) private var viewContext
+  //  @FetchRequest(sortDescriptors: [],
+  //                predicate: NSPredicate(format: "username == %@", UserSession.shared.username ?? ""),
+  //                animation: .default)
+  //  private var user: FetchedResults<User>
+  //
+  //  @FetchRequest(sortDescriptors: [])
+  //  private var allPosts: FetchedResults<Post>
+  //
+  //  private var didSave = NotificationCenter.default.publisher(for: .NSManagedObjectContextDidSave)
+  //  @State private var refreshing: Bool = false
+  
+  //View Properties
   @EnvironmentObject var presenter: TwierPresenter
   @State var showBottomSheet: Bool = false
+  @State var currentSelection: Int = 0
+  @State var posts: [Post] = []
   
   var body: some View {
     NavigationView {
       
       ZStack {
-        
         VStack {
-          
           VStack {
             HStack {
               Button {
@@ -45,20 +60,11 @@ struct TwierView: View {
           }
           .frame(height: 65)
           
-          ScrollView {
-            LazyVStack(alignment: .leading, spacing: 16) {
-              ForEach(0..<20) { i in
-                Text("Row \(i+1)")
-                  .padding(.horizontal, 16)
-              }
-            }
-            
-          }
-        }
-        .onAppear{
-          presenter.getUser()
-          presenter.readUsers()
-          showBottomSheet = false
+          TabView {
+            myPostView().onAppear{ presenter.readPosts() }
+            allPostView().onAppear{ presenter.readAllPost() }
+          }.tabViewStyle(.page(indexDisplayMode: .never))
+          
         }
         
         BottomSheet(
@@ -66,10 +72,40 @@ struct TwierView: View {
           showSheet: $showBottomSheet,
           selectedUser: $presenter.selectedUser
         )
-        
+        .onAppear{
+          presenter.readUsers()
+        }
       }
+      .onAppear{
+        presenter.checkUser()
+        showBottomSheet = false
+      }
+      .onChange(of: presenter.selectedUser) { newValue in
+        presenter.readPosts()
+      }
+      
     }
     
+  }
+  
+  private func userPosts() {
+    //    posts = user.first?.posts?.compactMap{$0 as? Post} ?? []
+  }
+  
+  @ViewBuilder
+  func myPostView() -> some View {
+    List(presenter.posts) { post in
+      Text(post.message ?? "")
+    }
+    .listStyle(.plain)
+  }
+  
+  @ViewBuilder
+  func allPostView() -> some View {
+    List(presenter.allPosts) { post in
+      Text(post.message ?? "")
+    }
+    .listStyle(.plain)
   }
   
 }

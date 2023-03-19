@@ -27,7 +27,7 @@ class UserInteractorImpl: UserInteractor {
   }
   
   func readUser(_ username: String) -> AnyPublisher<User, DatabaseError> {
-    fatalError()
+    return repository.getUser(with: username).eraseToAnyPublisher()
   }
   
 }

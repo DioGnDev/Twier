@@ -25,7 +25,7 @@ final class CreateInteractorTests: XCTestCase {
     var nerror: Bool = false
     
     //when
-    sut.createPost(username: "diiyo99",
+    sut.createPost(username: "ilham99",
                    text: text,
                    image: Data())
     .receive(on: DispatchQueue.global(qos: .userInteractive))

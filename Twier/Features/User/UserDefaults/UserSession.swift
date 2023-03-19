@@ -8,6 +8,8 @@ import Foundation
 
 struct UserSession {
   
+  public static var shared = UserSession()
+  
   public var username: String? {
     get {
       UserDefaults.standard.string(forKey: "USERNAME")

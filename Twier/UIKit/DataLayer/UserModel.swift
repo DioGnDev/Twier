@@ -6,7 +6,7 @@
 
 import Foundation
 
-struct UserModel {
+struct UserModel: Equatable{
   let name: String
   let username: String
 }

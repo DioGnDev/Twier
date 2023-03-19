@@ -9,18 +9,21 @@ import Combine
 
 class TwierPresenter: ObservableObject {
   
-  private let interactor: TwierInteractor
+  private let interactor: TwierInteractor & PostInteractor
   private let userInteractor: UserInteractor
   private let router: TwierRouter
   private var userSession: UserSession
   
-  @Published var selectedUser: UserModel
+  @Published var selectedUser: UserModel = .init(name: "", username: "")
   @Published var users: [User] = []
+  @Published var posts: [Post] = []
+  @Published var allPosts: [Post] = []
+  @Published var errorMessage: String = ""
   
   //Cancellable
   var subscriptions = Set<AnyCancellable>()
   
-  init(interactor: TwierInteractor,
+  init(interactor: TwierInteractor & PostInteractor,
        userInteractor: UserInteractor,
        router: TwierRouter,
        userSession: UserSession) {
@@ -30,15 +33,26 @@ class TwierPresenter: ObservableObject {
     self.router = router
     self.userSession = userSession
     
-    selectedUser = .init(name: "mantab", username: "mantab9")
+    self.getUserBy()
   }
-
+  
   var name: String {
     return selectedUser.name
   }
   
   var username: String {
     return selectedUser.username
+  }
+  
+  func getUserBy() {
+    userInteractor.readUser(userSession.username ?? "")
+      .receive(on: DispatchQueue.main)
+      .sink { completion in
+        print(completion)
+      } receiveValue: { [weak self] user in
+        self?.selectedUser = UserModel(name: user.name ?? "",
+                                       username: user.username ?? "")
+      }.store(in: &subscriptions)
   }
   
   func checkUser() {
@@ -85,7 +99,45 @@ class TwierPresenter: ObservableObject {
       } receiveValue: { [weak self] users in
         self?.users = users
       }.store(in: &subscriptions)
-      
+    
+  }
+  
+  func readAllPost() {
+    interactor.readPosts()
+      .sink { [weak self] completion in
+        switch completion {
+        case .failure(let error):
+          self?.errorMessage = error.localizedDescription
+          break
+        case .finished:
+          break
+        }
+      } receiveValue: { [weak self] items in
+        self?.allPosts = items
+      }.store(in: &subscriptions)
+  }
+  
+  func readPosts() {
+    userSession.username.publisher
+      .compactMap { $0 }
+      .flatMap { [weak self] username -> AnyPublisher<[Post], DatabaseError> in
+        guard let strongSelf = self else { return Empty(completeImmediately: true).eraseToAnyPublisher() }
+        return strongSelf.interactor.readPosts(by: username)
+      }
+      .receive(on: DispatchQueue.main)
+      .sink { [weak self] completion in
+        switch completion {
+        case .failure(let error):
+          self?.errorMessage = error.localizedDescription
+          break
+        case .finished:
+          break
+        }
+      } receiveValue: { [weak self] items in
+        self?.posts = items
+      }.store(in: &subscriptions)
+    
+    
   }
   
   func linkBuilder<Content: View>(@ViewBuilder content: () -> Content) -> some View {
