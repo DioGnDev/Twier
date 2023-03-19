@@ -25,7 +25,7 @@ final class CreatePresenterTests: XCTestCase {
     sut = CreateInteractorImpl(dataSource: dataSource)
     
     //when
-    sut.createPost(username: "diiyo99",
+    sut.createPost(username: "dio99",
                    text: "Test Post",
                    image: Data())
     .receive(on: DispatchQueue.global(qos: .userInteractive))
@@ -100,7 +100,7 @@ struct MockCreateInteractorImpl: CreateInteractor {
                   image: Data?) -> AnyPublisher<Bool, Twier.DatabaseError> {
     
     return Future<Bool, DatabaseError> { completion in
-      completion(.failure(.init()))
+      completion(.failure(.init(id: 100, message: "Database Error")))
     }.eraseToAnyPublisher()
     
   }

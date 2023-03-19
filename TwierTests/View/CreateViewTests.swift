@@ -47,7 +47,7 @@ final class CreateViewTests: XCTestCase {
     //then
     waitForExpectations(timeout: 5)
     XCTAssertFalse(sut.isLoading)
-    XCTAssertEqual(sut.errorMessage, "Error")
+    XCTAssertEqual(sut.errorMessage, "Database Error")
     XCTAssertFalse(sut.isSuccess)
     
   }
