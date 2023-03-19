@@ -9,19 +9,6 @@ import CoreData
 
 struct TwierView: View {
   
-  //Core Data
-  //  @Environment(\.managedObjectContext) private var viewContext
-  //  @FetchRequest(sortDescriptors: [],
-  //                predicate: NSPredicate(format: "username == %@", UserSession.shared.username ?? ""),
-  //                animation: .default)
-  //  private var user: FetchedResults<User>
-  //
-  //  @FetchRequest(sortDescriptors: [])
-  //  private var allPosts: FetchedResults<Post>
-  //
-  //  private var didSave = NotificationCenter.default.publisher(for: .NSManagedObjectContextDidSave)
-  //  @State private var refreshing: Bool = false
-  
   //View Properties
   @EnvironmentObject var presenter: TwierPresenter
   @State var showBottomSheet: Bool = false
@@ -32,20 +19,27 @@ struct TwierView: View {
     NavigationView {
       
       ZStack {
+        
         VStack {
+          
           VStack {
+            
             HStack {
+              
               Button {
                 withAnimation {
                   showBottomSheet.toggle()
                 }
               } label: {
-                HStack {
+                HStack(spacing: 10){
                   Image(systemName: "person.circle.fill")
                     .resizable()
-                    .frame(width: 25, height: 25)
+                    .frame(width: 30, height: 30)
+                    .foregroundColor(Color.white)
+                    .shadow(color: Color.red.opacity(0.3), radius: 5)
                   
                   Text(presenter.name)
+                    .foregroundColor(Color.white)
                 }
                 .foregroundColor(Color.black)
               }
@@ -54,11 +48,16 @@ struct TwierView: View {
               
               presenter.linkBuilder {
                 Label("", systemImage: "plus")
+                  .foregroundColor(Color.white)
               }
             }
             .padding(.horizontal, 16)
           }
           .frame(height: 65)
+          
+          HStack {
+            
+          }
           
           TabView {
             MyPostView(items: $presenter.posts)

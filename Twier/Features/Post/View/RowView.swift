@@ -8,21 +8,41 @@ import SwiftUI
 
 struct RowView: View {
   
+  let name: String
+  let username: String
   let text: String
   let imageData: Data?
   
   var body: some View {
     HStack(alignment: .top, spacing: 10, content: {
       
-      Image(systemName: "person.circle")
-        .resizable()
-        .aspectRatio(contentMode: .fill)
-        .frame(width: 30, height: 30)
-        .clipShape(Circle())
+      Button {
+        
+      } label: {
+        Circle()
+          .foregroundColor(Color("PrimaryColor"))
+          .overlay {
+            Text(String(describing: name.first!.uppercased()))
+              .foregroundColor(Color.white)
+          }
+          .frame(width: 30, height: 30)
+          .shadow(color: Color("PrimaryColor").opacity(0.5), radius: 10)
+      }
       
-      VStack(alignment: .leading) {
+      VStack(alignment: .leading, spacing: 3) {
+        
+        (
+          Text(name)
+            .font(.headline)
+          +
+          Text(" @\(username)")
+            .font(.headline)
+            .foregroundColor(Color.gray)
+        )
         
         Text(text)
+          .font(.subheadline)
+          .fontWeight(.medium)
           .frame(maxHeight: 100, alignment: .top)
         
         if let postImage = imageData,
@@ -46,6 +66,9 @@ struct RowView: View {
 
 struct RowView_Previews: PreviewProvider {
   static var previews: some View {
-    RowView(text: "", imageData: Data())
+    RowView(name: "Diiyo",
+            username: "diiyo99",
+            text: "",
+            imageData: Data())
   }
 }

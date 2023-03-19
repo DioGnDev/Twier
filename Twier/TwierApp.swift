@@ -12,6 +12,7 @@ struct TwierApp: App {
   var body: some Scene {
     WindowGroup {
       TwierView()
+        .environment(\.colorScheme, .dark)
         .environment(\.managedObjectContext, persistenceController.container.viewContext)
         .environmentObject(
           TwierPresenter(

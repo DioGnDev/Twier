@@ -12,7 +12,9 @@ struct MyPostView: View {
   
   var body: some View {
     List(items) { post in
-      RowView(text: post.message ?? "",
+      RowView(name: post.user?.name ?? "",
+              username: post.user?.username ?? "",
+              text: post.message ?? "",
               imageData: post.image)
       .padding(.top, 16)
     }
