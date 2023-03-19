@@ -109,7 +109,7 @@ struct PagerTabView<Content: View,Label: View>: View {
 
 struct PagerHelper_Previews: PreviewProvider {
   static var previews: some View {
-    ContentView()
+    TwierView()
   }
 }
 

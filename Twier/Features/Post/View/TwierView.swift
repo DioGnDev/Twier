@@ -31,15 +31,14 @@ struct TwierView: View {
                   showBottomSheet.toggle()
                 }
               } label: {
-                HStack(spacing: 10){
+                HStack(spacing: 16){
                   Image(systemName: "person.circle.fill")
                     .resizable()
-                    .frame(width: 30, height: 30)
+                    .frame(width: 25, height: 25)
                     .foregroundColor(Color.white)
-                    .shadow(color: Color.red.opacity(0.3), radius: 5)
+                    .shadow(color: Color.red, radius: 5)
                   
                   Text(presenter.name)
-                    .foregroundColor(Color.white)
                 }
                 .foregroundColor(Color.black)
               }
@@ -48,7 +47,8 @@ struct TwierView: View {
               
               presenter.linkBuilder {
                 Label("", systemImage: "plus")
-                  .foregroundColor(Color.white)
+                  .foregroundColor(Color("PrimaryColor"))
+                  .shadow(color: Color("PrimaryColor").opacity(0.3), radius: 5)
               }
             }
             .padding(.horizontal, 16)

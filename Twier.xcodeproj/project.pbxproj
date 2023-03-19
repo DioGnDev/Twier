@@ -25,7 +25,6 @@
 		4612F2E529C230C100B20EFD /* CreateLocalDataSourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4612F2E429C230C100B20EFD /* CreateLocalDataSourceImpl.swift */; };
 		4612F2E929C2311A00B20EFD /* DatabaseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4612F2E829C2311A00B20EFD /* DatabaseError.swift */; };
 		4623A66329C17D6B00FFAEBE /* TwierApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4623A66229C17D6B00FFAEBE /* TwierApp.swift */; };
-		4623A66529C17D6B00FFAEBE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4623A66429C17D6B00FFAEBE /* ContentView.swift */; };
 		4623A66729C17D6D00FFAEBE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4623A66629C17D6D00FFAEBE /* Assets.xcassets */; };
 		4623A66A29C17D6D00FFAEBE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4623A66929C17D6D00FFAEBE /* Preview Assets.xcassets */; };
 		4623A66C29C17D6D00FFAEBE /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4623A66B29C17D6D00FFAEBE /* Persistence.swift */; };
@@ -90,7 +89,6 @@
 		4612F2E829C2311A00B20EFD /* DatabaseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseError.swift; sourceTree = "<group>"; };
 		4623A65F29C17D6B00FFAEBE /* Twier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Twier.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4623A66229C17D6B00FFAEBE /* TwierApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwierApp.swift; sourceTree = "<group>"; };
-		4623A66429C17D6B00FFAEBE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4623A66629C17D6D00FFAEBE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4623A66929C17D6D00FFAEBE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4623A66B29C17D6D00FFAEBE /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -257,7 +255,6 @@
 				46ED29F329C4714B006109E0 /* UIKit */,
 				4612F2DA29C2302400B20EFD /* Features */,
 				4623A66229C17D6B00FFAEBE /* TwierApp.swift */,
-				4623A66429C17D6B00FFAEBE /* ContentView.swift */,
 				4623A66629C17D6D00FFAEBE /* Assets.xcassets */,
 				4623A66B29C17D6D00FFAEBE /* Persistence.swift */,
 				4623A66D29C17D6D00FFAEBE /* Twier.xcdatamodeld */,
@@ -597,7 +594,6 @@
 				4623A66F29C17D6D00FFAEBE /* Twier.xcdatamodeld in Sources */,
 				46076D6129C70B1400DC81FB /* RowView.swift in Sources */,
 				460168B729C6B5B1005290CA /* PostLocalDatasource.swift in Sources */,
-				4623A66529C17D6B00FFAEBE /* ContentView.swift in Sources */,
 				460168A729C5FA7E005290CA /* BlurView.swift in Sources */,
 				4612F2E929C2311A00B20EFD /* DatabaseError.swift in Sources */,
 				460168AF29C62562005290CA /* UserModel.swift in Sources */,

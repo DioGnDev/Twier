@@ -16,18 +16,14 @@ struct RowView: View {
   var body: some View {
     HStack(alignment: .top, spacing: 10, content: {
       
-      Button {
-        
-      } label: {
-        Circle()
-          .foregroundColor(Color("PrimaryColor"))
-          .overlay {
-            Text(String(describing: name.first!.uppercased()))
-              .foregroundColor(Color.white)
-          }
-          .frame(width: 30, height: 30)
-          .shadow(color: Color("PrimaryColor").opacity(0.5), radius: 10)
-      }
+      Circle()
+        .foregroundColor(Color("PrimaryColor"))
+        .overlay {
+          Text(String(describing: name.first!.uppercased()))
+            .foregroundColor(Color.white)
+        }
+        .frame(width: 30, height: 30)
+        .shadow(color: Color("PrimaryColor").opacity(0.3), radius: 4)
       
       VStack(alignment: .leading, spacing: 3) {
         
@@ -39,6 +35,7 @@ struct RowView: View {
             .font(.headline)
             .foregroundColor(Color.gray)
         )
+        .padding(.bottom, 8)
         
         Text(text)
           .font(.subheadline)
