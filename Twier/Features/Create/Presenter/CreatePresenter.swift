@@ -52,7 +52,7 @@ class CreatePresenter: ObservableObject {
       switch completion {
       case .failure(let error):
         self?.presentError.toggle()
-        self?.errorMessage = error.localizedDescription
+        self?.errorMessage = error.message
         break
       case .finished:
         break

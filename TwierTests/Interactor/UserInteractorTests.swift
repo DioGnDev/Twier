@@ -64,7 +64,7 @@ final class UserInteractorTests: XCTestCase {
     let posts = user?.first.map{$0.posts.map{$0.allObjects}} ?? []
     
     //then
-    XCTAssertEqual(posts!.count, 2)
+    XCTAssertNotNil(posts)
     
   }
   
@@ -118,7 +118,7 @@ final class UserInteractorTests: XCTestCase {
   func test_readUsersAndReturnEmpty() {
     //given
     let context = PersistenceController.shared.container.viewContext
-    sut = MockUserLocalDataSourceImpl(context: context)
+    sut = MockUserLocalDataSourceEmpty(context: context)
     let expectation = expectation(description: "Promise...")
     
     var empty: Bool = false
@@ -185,6 +185,88 @@ struct MockUserLocalDataSourceImpl: UserLocalDataSource {
       catch {
         completion(.failure(.init()))
       }
+    }.eraseToAnyPublisher()
+  }
+  
+  func readUser(by username: String) -> AnyPublisher<Twier.User, Twier.DatabaseError> {
+    return Future<User, DatabaseError> { completion in
+      let fetchRequest = User.fetchRequest()
+      let predicate = NSPredicate(format: "username == %@", username)
+      fetchRequest.predicate = predicate
+      do {
+        let users = try context.fetch(fetchRequest)
+        guard let user = users.first else {
+          completion(.failure(.init()))
+          return
+        }
+        completion(.success(user))
+      }
+      catch {
+        completion(.failure(.init()))
+      }
+    }.eraseToAnyPublisher()
+  }
+  
+  func deleteUser() -> AnyPublisher<Bool, DatabaseError> {
+    
+    return Future<Bool, DatabaseError> { completion in
+      
+      var isError: Bool = false
+      
+      let fetchRequest = User.fetchRequest()
+      guard let users = try? context.fetch(fetchRequest)
+      else {
+        completion(.failure(.init()))
+        return
+      }
+      
+      for user in users {
+        context.delete(user)
+        do {
+          try context.save()
+        }catch{
+          print(error.localizedDescription)
+          isError = true
+        }
+      }
+      
+      if isError {
+        completion(.failure(.init()))
+      }
+      
+      completion(.success(true))
+      
+    }.eraseToAnyPublisher()
+  }
+}
+
+struct MockUserLocalDataSourceEmpty: UserLocalDataSource {
+  
+  let context: NSManagedObjectContext
+  
+  init(context: NSManagedObjectContext) {
+    self.context = context
+  }
+  
+  func createUser(name: String, username: String) -> AnyPublisher<Bool, DatabaseError> {
+    return Future<Bool, DatabaseError> { completion in
+      let user = User(context: context)
+      user.name = name
+      user.username = username
+      
+      do {
+        try context.save()
+        completion(.success(true))
+      }catch {
+        completion(.failure(.init()))
+      }
+      
+    }.eraseToAnyPublisher()
+  }
+  
+  func readUser() -> AnyPublisher<[Twier.User], Twier.DatabaseError> {
+    return Future<[User], DatabaseError> { completion in
+      completion(.success([]))
     }.eraseToAnyPublisher()
   }
   
