@@ -7,6 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		460168A529C5FA31005290CA /* BottomSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460168A429C5FA31005290CA /* BottomSheet.swift */; };
+		460168A729C5FA7E005290CA /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460168A629C5FA7E005290CA /* BlurView.swift */; };
+		460168A929C5FACF005290CA /* CustomShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460168A829C5FACF005290CA /* CustomShape.swift */; };
+		460168AB29C5FAE1005290CA /* CustomCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460168AA29C5FAE1005290CA /* CustomCorner.swift */; };
+		460168AD29C618CE005290CA /* UserInteractorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460168AC29C618CE005290CA /* UserInteractorImpl.swift */; };
+		460168AF29C62562005290CA /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460168AE29C62562005290CA /* UserModel.swift */; };
+		460168B129C62A60005290CA /* PagerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460168B029C62A60005290CA /* PagerHelper.swift */; };
+		460168B329C62A88005290CA /* OffsetTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460168B229C62A88005290CA /* OffsetTabView.swift */; };
+		460168B529C6B2CA005290CA /* TwierPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460168B429C6B2CA005290CA /* TwierPresenterTests.swift */; };
+		460168B729C6B5B1005290CA /* PostLocalDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460168B629C6B5B1005290CA /* PostLocalDatasource.swift */; };
+		460168B929C6BE38005290CA /* TwierViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460168B829C6BE38005290CA /* TwierViewTests.swift */; };
+		460168BB29C6E9E3005290CA /* PageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460168BA29C6E9E3005290CA /* PageView.swift */; };
+		4612F2E529C230C100B20EFD /* CreateLocalDataSourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4612F2E429C230C100B20EFD /* CreateLocalDataSourceImpl.swift */; };
+		4612F2E929C2311A00B20EFD /* DatabaseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4612F2E829C2311A00B20EFD /* DatabaseError.swift */; };
 		4623A66329C17D6B00FFAEBE /* TwierApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4623A66229C17D6B00FFAEBE /* TwierApp.swift */; };
 		4623A66529C17D6B00FFAEBE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4623A66429C17D6B00FFAEBE /* ContentView.swift */; };
 		4623A66729C17D6D00FFAEBE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4623A66629C17D6D00FFAEBE /* Assets.xcassets */; };
@@ -16,6 +30,24 @@
 		4623A67929C17D6D00FFAEBE /* TwierTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4623A67829C17D6D00FFAEBE /* TwierTests.swift */; };
 		4623A68329C17D6D00FFAEBE /* TwierUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4623A68229C17D6D00FFAEBE /* TwierUITests.swift */; };
 		4623A68529C17D6D00FFAEBE /* TwierUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4623A68429C17D6D00FFAEBE /* TwierUITestsLaunchTests.swift */; };
+		463840BF29C2A7AA00182532 /* CreateInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463840BE29C2A7AA00182532 /* CreateInteractorTests.swift */; };
+		463840C129C2A82900182532 /* UserInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463840C029C2A82900182532 /* UserInteractorTests.swift */; };
+		463840CA29C3137A00182532 /* TwierInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463840C929C3137A00182532 /* TwierInteractor.swift */; };
+		463840CE29C314EF00182532 /* CreateInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463840CD29C314EF00182532 /* CreateInteractor.swift */; };
+		463840D029C3179300182532 /* UserInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463840CF29C3179300182532 /* UserInteractor.swift */; };
+		463840D929C31D7E00182532 /* CreatePresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463840D829C31D7E00182532 /* CreatePresenterTests.swift */; };
+		463840DB29C3566C00182532 /* CreatePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463840DA29C3566C00182532 /* CreatePresenter.swift */; };
+		463840DE29C3589400182532 /* CreateViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463840DD29C3589400182532 /* CreateViewTests.swift */; };
+		46C2F77329C3EF6F00787DA5 /* CreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C2F77229C3EF6F00787DA5 /* CreateView.swift */; };
+		46ED29EA29C45CAF006109E0 /* UserLocalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46ED29E929C45CAF006109E0 /* UserLocalDataSource.swift */; };
+		46ED29ED29C45E46006109E0 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46ED29EC29C45E46006109E0 /* UserRepository.swift */; };
+		46ED29F029C46ED7006109E0 /* UserSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46ED29EF29C46ED7006109E0 /* UserSession.swift */; };
+		46ED29F529C47169006109E0 /* PhotoPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46ED29F429C47169006109E0 /* PhotoPicker.swift */; };
+		46ED29F729C472D8006109E0 /* TwierView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46ED29F629C472D8006109E0 /* TwierView.swift */; };
+		46ED29F929C473F0006109E0 /* TwierPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46ED29F829C473F0006109E0 /* TwierPresenter.swift */; };
+		46ED29FB29C4743F006109E0 /* TwierRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46ED29FA29C4743F006109E0 /* TwierRouter.swift */; };
+		46ED29FD29C47825006109E0 /* DependencyInjection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46ED29FC29C47825006109E0 /* DependencyInjection.swift */; };
+		46ED29FF29C47B97006109E0 /* CreateRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46ED29FE29C47B97006109E0 /* CreateRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +68,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		460168A429C5FA31005290CA /* BottomSheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomSheet.swift; sourceTree = "<group>"; };
+		460168A629C5FA7E005290CA /* BlurView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
+		460168A829C5FACF005290CA /* CustomShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomShape.swift; sourceTree = "<group>"; };
+		460168AA29C5FAE1005290CA /* CustomCorner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCorner.swift; sourceTree = "<group>"; };
+		460168AC29C618CE005290CA /* UserInteractorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInteractorImpl.swift; sourceTree = "<group>"; };
+		460168AE29C62562005290CA /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		460168B029C62A60005290CA /* PagerHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagerHelper.swift; sourceTree = "<group>"; };
+		460168B229C62A88005290CA /* OffsetTabView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OffsetTabView.swift; sourceTree = "<group>"; };
+		460168B429C6B2CA005290CA /* TwierPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwierPresenterTests.swift; sourceTree = "<group>"; };
+		460168B629C6B5B1005290CA /* PostLocalDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostLocalDatasource.swift; sourceTree = "<group>"; };
+		460168B829C6BE38005290CA /* TwierViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwierViewTests.swift; sourceTree = "<group>"; };
+		460168BA29C6E9E3005290CA /* PageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageView.swift; sourceTree = "<group>"; };
+		4612F2E429C230C100B20EFD /* CreateLocalDataSourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateLocalDataSourceImpl.swift; sourceTree = "<group>"; };
+		4612F2E829C2311A00B20EFD /* DatabaseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseError.swift; sourceTree = "<group>"; };
 		4623A65F29C17D6B00FFAEBE /* Twier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Twier.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4623A66229C17D6B00FFAEBE /* TwierApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwierApp.swift; sourceTree = "<group>"; };
 		4623A66429C17D6B00FFAEBE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -48,6 +94,28 @@
 		4623A67E29C17D6D00FFAEBE /* TwierUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TwierUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4623A68229C17D6D00FFAEBE /* TwierUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwierUITests.swift; sourceTree = "<group>"; };
 		4623A68429C17D6D00FFAEBE /* TwierUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwierUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		463840B229C2A0F100182532 /* Post+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Post+CoreDataClass.swift"; sourceTree = "<group>"; };
+		463840B329C2A0F100182532 /* Post+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Post+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		463840B429C2A0F100182532 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
+		463840B529C2A0F100182532 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		463840BE29C2A7AA00182532 /* CreateInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateInteractorTests.swift; sourceTree = "<group>"; };
+		463840C029C2A82900182532 /* UserInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInteractorTests.swift; sourceTree = "<group>"; };
+		463840C929C3137A00182532 /* TwierInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwierInteractor.swift; sourceTree = "<group>"; };
+		463840CD29C314EF00182532 /* CreateInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateInteractor.swift; sourceTree = "<group>"; };
+		463840CF29C3179300182532 /* UserInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInteractor.swift; sourceTree = "<group>"; };
+		463840D829C31D7E00182532 /* CreatePresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePresenterTests.swift; sourceTree = "<group>"; };
+		463840DA29C3566C00182532 /* CreatePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePresenter.swift; sourceTree = "<group>"; };
+		463840DD29C3589400182532 /* CreateViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateViewTests.swift; sourceTree = "<group>"; };
+		46C2F77229C3EF6F00787DA5 /* CreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateView.swift; sourceTree = "<group>"; };
+		46ED29E929C45CAF006109E0 /* UserLocalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocalDataSource.swift; sourceTree = "<group>"; };
+		46ED29EC29C45E46006109E0 /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
+		46ED29EF29C46ED7006109E0 /* UserSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSession.swift; sourceTree = "<group>"; };
+		46ED29F429C47169006109E0 /* PhotoPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoPicker.swift; sourceTree = "<group>"; };
+		46ED29F629C472D8006109E0 /* TwierView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwierView.swift; sourceTree = "<group>"; };
+		46ED29F829C473F0006109E0 /* TwierPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwierPresenter.swift; sourceTree = "<group>"; };
+		46ED29FA29C4743F006109E0 /* TwierRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwierRouter.swift; sourceTree = "<group>"; };
+		46ED29FC29C47825006109E0 /* DependencyInjection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyInjection.swift; sourceTree = "<group>"; };
+		46ED29FE29C47B97006109E0 /* CreateRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +143,88 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4612F2DA29C2302400B20EFD /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				46ED29E729C45C78006109E0 /* User */,
+				463840C229C30C9400182532 /* Post */,
+				4612F2DC29C2303D00B20EFD /* Create */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		4612F2DC29C2303D00B20EFD /* Create */ = {
+			isa = PBXGroup;
+			children = (
+				4612F2E129C2306500B20EFD /* Router */,
+				4612F2E229C2307400B20EFD /* Entity */,
+				4612F2DE29C2304F00B20EFD /* Interactor */,
+				4612F2DD29C2304900B20EFD /* Presenter */,
+				4612F2E029C2306100B20EFD /* View */,
+				4612F2E329C230A800B20EFD /* DataSource */,
+			);
+			path = Create;
+			sourceTree = "<group>";
+		};
+		4612F2DD29C2304900B20EFD /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				463840DA29C3566C00182532 /* CreatePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		4612F2DE29C2304F00B20EFD /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				463840CD29C314EF00182532 /* CreateInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		4612F2E029C2306100B20EFD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				46C2F77229C3EF6F00787DA5 /* CreateView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4612F2E129C2306500B20EFD /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				46ED29FE29C47B97006109E0 /* CreateRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		4612F2E229C2307400B20EFD /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		4612F2E329C230A800B20EFD /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				4612F2E429C230C100B20EFD /* CreateLocalDataSourceImpl.swift */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		4612F2E729C2310700B20EFD /* DataLayer */ = {
+			isa = PBXGroup;
+			children = (
+				4623A69129C21AEA00FFAEBE /* Local */,
+				4612F2E829C2311A00B20EFD /* DatabaseError.swift */,
+				463840CF29C3179300182532 /* UserInteractor.swift */,
+				46ED29FC29C47825006109E0 /* DependencyInjection.swift */,
+				460168AE29C62562005290CA /* UserModel.swift */,
+			);
+			path = DataLayer;
+			sourceTree = "<group>";
+		};
 		4623A65629C17D6B00FFAEBE = {
 			isa = PBXGroup;
 			children = (
@@ -98,6 +248,8 @@
 		4623A66129C17D6B00FFAEBE /* Twier */ = {
 			isa = PBXGroup;
 			children = (
+				46ED29F329C4714B006109E0 /* UIKit */,
+				4612F2DA29C2302400B20EFD /* Features */,
 				4623A66229C17D6B00FFAEBE /* TwierApp.swift */,
 				4623A66429C17D6B00FFAEBE /* ContentView.swift */,
 				4623A66629C17D6D00FFAEBE /* Assets.xcassets */,
@@ -119,6 +271,9 @@
 		4623A67729C17D6D00FFAEBE /* TwierTests */ = {
 			isa = PBXGroup;
 			children = (
+				463840DC29C3586A00182532 /* View */,
+				463840D529C31D4E00182532 /* Presenter */,
+				463840D129C318AD00182532 /* Interactor */,
 				4623A67829C17D6D00FFAEBE /* TwierTests.swift */,
 			);
 			path = TwierTests;
@@ -131,6 +286,155 @@
 				4623A68429C17D6D00FFAEBE /* TwierUITestsLaunchTests.swift */,
 			);
 			path = TwierUITests;
+			sourceTree = "<group>";
+		};
+		4623A69129C21AEA00FFAEBE /* Local */ = {
+			isa = PBXGroup;
+			children = (
+				463840B229C2A0F100182532 /* Post+CoreDataClass.swift */,
+				463840B329C2A0F100182532 /* Post+CoreDataProperties.swift */,
+				463840B429C2A0F100182532 /* User+CoreDataClass.swift */,
+				463840B529C2A0F100182532 /* User+CoreDataProperties.swift */,
+			);
+			path = Local;
+			sourceTree = "<group>";
+		};
+		463840C229C30C9400182532 /* Post */ = {
+			isa = PBXGroup;
+			children = (
+				463840C529C30CA500182532 /* View */,
+				463840C829C30CC200182532 /* Router */,
+				463840C729C30CB000182532 /* DataSource */,
+				463840C429C30CA100182532 /* Interactor */,
+				463840C329C30C9B00182532 /* Presenter */,
+			);
+			path = Post;
+			sourceTree = "<group>";
+		};
+		463840C329C30C9B00182532 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				46ED29F829C473F0006109E0 /* TwierPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		463840C429C30CA100182532 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				463840C929C3137A00182532 /* TwierInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		463840C529C30CA500182532 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				46ED29F629C472D8006109E0 /* TwierView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		463840C729C30CB000182532 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				460168B629C6B5B1005290CA /* PostLocalDatasource.swift */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		463840C829C30CC200182532 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				46ED29FA29C4743F006109E0 /* TwierRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		463840D129C318AD00182532 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				463840BE29C2A7AA00182532 /* CreateInteractorTests.swift */,
+				463840C029C2A82900182532 /* UserInteractorTests.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		463840D529C31D4E00182532 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				463840D829C31D7E00182532 /* CreatePresenterTests.swift */,
+				460168B429C6B2CA005290CA /* TwierPresenterTests.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		463840DC29C3586A00182532 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				463840DD29C3589400182532 /* CreateViewTests.swift */,
+				460168B829C6BE38005290CA /* TwierViewTests.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		46ED29E729C45C78006109E0 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				46ED29F129C470AE006109E0 /* UserDefaults */,
+				46ED29EB29C45CFE006109E0 /* Interactor */,
+				46ED29E829C45C7D006109E0 /* DataSource */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		46ED29E829C45C7D006109E0 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				46ED29E929C45CAF006109E0 /* UserLocalDataSource.swift */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		46ED29EB29C45CFE006109E0 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				46ED29EC29C45E46006109E0 /* UserRepository.swift */,
+				460168AC29C618CE005290CA /* UserInteractorImpl.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		46ED29F129C470AE006109E0 /* UserDefaults */ = {
+			isa = PBXGroup;
+			children = (
+				46ED29EF29C46ED7006109E0 /* UserSession.swift */,
+			);
+			path = UserDefaults;
+			sourceTree = "<group>";
+		};
+		46ED29F229C47140006109E0 /* UILayer */ = {
+			isa = PBXGroup;
+			children = (
+				460168BA29C6E9E3005290CA /* PageView.swift */,
+				460168B229C62A88005290CA /* OffsetTabView.swift */,
+				460168B029C62A60005290CA /* PagerHelper.swift */,
+				460168AA29C5FAE1005290CA /* CustomCorner.swift */,
+				460168A829C5FACF005290CA /* CustomShape.swift */,
+				460168A629C5FA7E005290CA /* BlurView.swift */,
+				460168A429C5FA31005290CA /* BottomSheet.swift */,
+				46ED29F429C47169006109E0 /* PhotoPicker.swift */,
+			);
+			path = UILayer;
+			sourceTree = "<group>";
+		};
+		46ED29F329C4714B006109E0 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				46ED29F229C47140006109E0 /* UILayer */,
+				4612F2E729C2310700B20EFD /* DataLayer */,
+			);
+			path = UIKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,9 +567,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46ED29F929C473F0006109E0 /* TwierPresenter.swift in Sources */,
+				46ED29F729C472D8006109E0 /* TwierView.swift in Sources */,
+				46ED29FF29C47B97006109E0 /* CreateRouter.swift in Sources */,
+				46ED29ED29C45E46006109E0 /* UserRepository.swift in Sources */,
+				46C2F77329C3EF6F00787DA5 /* CreateView.swift in Sources */,
+				46ED29EA29C45CAF006109E0 /* UserLocalDataSource.swift in Sources */,
+				46ED29F029C46ED7006109E0 /* UserSession.swift in Sources */,
+				463840CA29C3137A00182532 /* TwierInteractor.swift in Sources */,
+				4612F2E529C230C100B20EFD /* CreateLocalDataSourceImpl.swift in Sources */,
+				460168AB29C5FAE1005290CA /* CustomCorner.swift in Sources */,
+				463840DB29C3566C00182532 /* CreatePresenter.swift in Sources */,
+				460168B329C62A88005290CA /* OffsetTabView.swift in Sources */,
+				463840D029C3179300182532 /* UserInteractor.swift in Sources */,
+				46ED29F529C47169006109E0 /* PhotoPicker.swift in Sources */,
+				460168B129C62A60005290CA /* PagerHelper.swift in Sources */,
 				4623A66C29C17D6D00FFAEBE /* Persistence.swift in Sources */,
 				4623A66F29C17D6D00FFAEBE /* Twier.xcdatamodeld in Sources */,
+				460168B729C6B5B1005290CA /* PostLocalDatasource.swift in Sources */,
 				4623A66529C17D6B00FFAEBE /* ContentView.swift in Sources */,
+				460168A729C5FA7E005290CA /* BlurView.swift in Sources */,
+				4612F2E929C2311A00B20EFD /* DatabaseError.swift in Sources */,
+				460168AF29C62562005290CA /* UserModel.swift in Sources */,
+				460168A529C5FA31005290CA /* BottomSheet.swift in Sources */,
+				463840CE29C314EF00182532 /* CreateInteractor.swift in Sources */,
+				46ED29FD29C47825006109E0 /* DependencyInjection.swift in Sources */,
+				460168BB29C6E9E3005290CA /* PageView.swift in Sources */,
+				460168AD29C618CE005290CA /* UserInteractorImpl.swift in Sources */,
+				460168A929C5FACF005290CA /* CustomShape.swift in Sources */,
+				46ED29FB29C4743F006109E0 /* TwierRouter.swift in Sources */,
 				4623A66329C17D6B00FFAEBE /* TwierApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -274,7 +604,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				460168B929C6BE38005290CA /* TwierViewTests.swift in Sources */,
+				463840D929C31D7E00182532 /* CreatePresenterTests.swift in Sources */,
+				463840DE29C3589400182532 /* CreateViewTests.swift in Sources */,
+				460168B529C6B2CA005290CA /* TwierPresenterTests.swift in Sources */,
+				463840BF29C2A7AA00182532 /* CreateInteractorTests.swift in Sources */,
 				4623A67929C17D6D00FFAEBE /* TwierTests.swift in Sources */,
+				463840C129C2A82900182532 /* UserInteractorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
