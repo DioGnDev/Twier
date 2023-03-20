@@ -14,7 +14,7 @@ class TwierPresenter: ObservableObject {
   private let router: TwierRouter
   private var userSession: UserSession
   
-  @Published var selectedUser: UserModel = .init(name: "", username: "")
+  @Published var selectedUser: UserModel = .init(name: "", username: "", avatar: "")
   @Published var users: [User] = []
   @Published var posts: [Post] = []
   @Published var allPosts: [Post] = []
@@ -51,8 +51,10 @@ class TwierPresenter: ObservableObject {
         guard let self = self else { return }
         self.selectedUser = UserModel(
           name: "",
-          username: self.userSession.username ?? ""
+          username: self.userSession.username ?? "",
+          avatar: ""
         )
+        self.readUsers()
       }.store(in: &subscriptions)
   }
   

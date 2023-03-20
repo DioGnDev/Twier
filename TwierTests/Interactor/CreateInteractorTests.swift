@@ -61,7 +61,7 @@ final class CreateInteractorTests: XCTestCase {
     sut = MockCreateLocalDataSourceImpl(context: context)
     
     //when
-    sut.createPost(username: "ilham99",
+    sut.createPost(username: "steve",
                    text: text,
                    image: Data())
     .receive(on: DispatchQueue.global(qos: .userInteractive))

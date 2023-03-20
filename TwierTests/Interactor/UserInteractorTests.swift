@@ -31,7 +31,7 @@ final class UserInteractorTests: XCTestCase {
     var isError: Bool = false
     
     //when
-    sut.createUser(name: "Dio", username: "dio99")
+    sut.createUser(name: "Steve Vai", username: "steve", avatar: "steve_vai")
       .receive(on: DispatchQueue.global(qos: .userInteractive))
       .sink { completion in
         switch completion {
@@ -58,7 +58,7 @@ final class UserInteractorTests: XCTestCase {
     
     //when
     let fetchRequest = User.fetchRequest()
-    let predicate = NSPredicate(format: "username == %@", "ilham99")
+    let predicate = NSPredicate(format: "username == %@", "steve")
     fetchRequest.predicate = predicate
     let user = try? context.fetch(fetchRequest)
     let posts = user?.first.map{$0.posts.map{$0.allObjects}} ?? []
@@ -159,7 +159,7 @@ struct MockUserLocalDataSourceImpl: UserLocalDataSource {
     self.context = context
   }
   
-  func createUser(name: String, username: String) -> AnyPublisher<Bool, DatabaseError> {
+  func createUser(name: String, username: String, avatar: String) -> AnyPublisher<Bool, DatabaseError> {
     return Future<Bool, DatabaseError> { completion in
       let user = User(context: context)
       user.name = name
@@ -248,7 +248,7 @@ struct MockUserLocalDataSourceEmpty: UserLocalDataSource {
     self.context = context
   }
   
-  func createUser(name: String, username: String) -> AnyPublisher<Bool, DatabaseError> {
+  func createUser(name: String, username: String, avatar: String) -> AnyPublisher<Bool, DatabaseError> {
     return Future<Bool, DatabaseError> { completion in
       let user = User(context: context)
       user.name = name

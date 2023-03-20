@@ -9,7 +9,7 @@ import Combine
 import CoreData
 
 protocol UserLocalDataSource {
-  func createUser(name: String, username: String) -> AnyPublisher<Bool, DatabaseError>
+  func createUser(name: String, username: String, avatar: String) -> AnyPublisher<Bool, DatabaseError>
   func readUser() -> AnyPublisher<[User], DatabaseError>
   func readUser(by username: String) -> AnyPublisher<User, DatabaseError>
   func deleteUser() -> AnyPublisher<Bool, DatabaseError>
@@ -23,11 +23,12 @@ struct UserLocalDataSourceImpl: UserLocalDataSource {
     self.context = context
   }
   
-  func createUser(name: String, username: String) -> AnyPublisher<Bool, DatabaseError> {
+  func createUser(name: String, username: String, avatar: String) -> AnyPublisher<Bool, DatabaseError> {
     return Future<Bool, DatabaseError> { completion in
       let user = User(context: context)
       user.name = name
       user.username = username
+      user.avatar = avatar
       
       do {
         try context.save()

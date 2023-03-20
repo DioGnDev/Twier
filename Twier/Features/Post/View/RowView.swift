@@ -10,22 +10,21 @@ struct RowView: View {
   
   let name: String
   let username: String
+  let avatar: String
   let text: String
   let imageData: Data?
   
   var body: some View {
     HStack(alignment: .top, spacing: 10, content: {
       
-      Circle()
-        .foregroundColor(Color("PrimaryColor"))
-        .overlay {
-          Text(String(describing: name.first?.uppercased() ?? ""))
-            .foregroundColor(Color.white)
-        }
+      Image(avatar)
+        .resizable()
         .frame(width: 30, height: 30)
+        .foregroundColor(Color("PrimaryColor"))
+        .clipShape(Circle())
         .shadow(color: Color("PrimaryColor").opacity(0.3), radius: 4)
       
-      VStack(alignment: .leading, spacing: 3) {
+      VStack(alignment: .leading, spacing: 8) {
         
         (
           Text(name)
@@ -69,6 +68,7 @@ struct RowView_Previews: PreviewProvider {
   static var previews: some View {
     RowView(name: "Diiyo",
             username: "diiyo99",
+            avatar: "steve_vai",
             text: "",
             imageData: Data())
   }
