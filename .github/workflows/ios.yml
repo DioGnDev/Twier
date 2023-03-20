@@ -16,5 +16,5 @@ jobs:
       - name: Test
         run: xcodebuild -project 'Twier.xcodeproj' -scheme 'Twier' -destination 'platform=iOS Simulator,name=iPhone 13' test
       - name: Build
-        run: xcodebuild -project 'Twier.xcodeproj' -scheme 'Twier' -destination 'generic/platform=iOS' -Configuration Release build CODE_SIGNING_ALLOWED=NO
+        run: xcodebuild -project 'Twier.xcodeproj' -scheme 'Twier' -destination 'platform=iOS Simulator,name=iPhone 13' -Configuration Release build CODE_SIGNING_ALLOWED=NO
       
