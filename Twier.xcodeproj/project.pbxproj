@@ -23,6 +23,7 @@
 		46076D6129C70B1400DC81FB /* RowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46076D6029C70B1400DC81FB /* RowView.swift */; };
 		4612F2E529C230C100B20EFD /* CreateLocalDataSourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4612F2E429C230C100B20EFD /* CreateLocalDataSourceImpl.swift */; };
 		4612F2E929C2311A00B20EFD /* DatabaseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4612F2E829C2311A00B20EFD /* DatabaseError.swift */; };
+		461AE51429C8523A00E11A2A /* EmptyPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461AE51329C8523A00E11A2A /* EmptyPostView.swift */; };
 		4623A66329C17D6B00FFAEBE /* TwierApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4623A66229C17D6B00FFAEBE /* TwierApp.swift */; };
 		4623A66729C17D6D00FFAEBE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4623A66629C17D6D00FFAEBE /* Assets.xcassets */; };
 		4623A66A29C17D6D00FFAEBE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4623A66929C17D6D00FFAEBE /* Preview Assets.xcassets */; };
@@ -85,6 +86,7 @@
 		46076D6029C70B1400DC81FB /* RowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowView.swift; sourceTree = "<group>"; };
 		4612F2E429C230C100B20EFD /* CreateLocalDataSourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateLocalDataSourceImpl.swift; sourceTree = "<group>"; };
 		4612F2E829C2311A00B20EFD /* DatabaseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseError.swift; sourceTree = "<group>"; };
+		461AE51329C8523A00E11A2A /* EmptyPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyPostView.swift; sourceTree = "<group>"; };
 		4623A65F29C17D6B00FFAEBE /* Twier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Twier.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4623A66229C17D6B00FFAEBE /* TwierApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwierApp.swift; sourceTree = "<group>"; };
 		4623A66629C17D6D00FFAEBE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -427,6 +429,7 @@
 				460168A629C5FA7E005290CA /* BlurView.swift */,
 				460168A429C5FA31005290CA /* BottomSheet.swift */,
 				46ED29F429C47169006109E0 /* PhotoPicker.swift */,
+				461AE51329C8523A00E11A2A /* EmptyPostView.swift */,
 			);
 			path = UILayer;
 			sourceTree = "<group>";
@@ -581,6 +584,7 @@
 				46ED29F029C46ED7006109E0 /* UserSession.swift in Sources */,
 				463840CA29C3137A00182532 /* TwierInteractor.swift in Sources */,
 				4612F2E529C230C100B20EFD /* CreateLocalDataSourceImpl.swift in Sources */,
+				461AE51429C8523A00E11A2A /* EmptyPostView.swift in Sources */,
 				460168AB29C5FAE1005290CA /* CustomCorner.swift in Sources */,
 				463840DB29C3566C00182532 /* CreatePresenter.swift in Sources */,
 				460168B329C62A88005290CA /* OffsetTabView.swift in Sources */,

@@ -87,6 +87,7 @@ struct TwierView: View {
               .offset(x: tabOffset)
             
             TabView(selection: $currentSelection) {
+              
               MyPostView(items: $presenter.posts, presenter: presenter)
                 .tag(0)
                 .onAppear{ presenter.readPosts() }
@@ -114,7 +115,7 @@ struct TwierView: View {
           users: presenter.users,
           showSheet: $showBottomSheet,
           selectedUser: $presenter.selectedUser
-       )
+        )
       }
       .onAppear{
         presenter.checkUser()
