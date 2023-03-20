@@ -87,13 +87,14 @@ struct TwierView: View {
               .offset(x: tabOffset)
             
             TabView(selection: $currentSelection) {
-              MyPostView(items: $presenter.posts)
+              MyPostView(items: $presenter.posts, presenter: presenter)
                 .tag(0)
                 .onAppear{ presenter.readPosts() }
               
-              AllPostView(items: $presenter.allPosts)
-                .tag(1)
-                .onAppear{ presenter.readAllPost() }
+              AllPostView(items: $presenter.allPosts,
+                          presenter: presenter)
+              .tag(1)
+              .onAppear{ presenter.readAllPost() }
               
             }
             .tabViewStyle(.page(indexDisplayMode: .never))
@@ -102,7 +103,7 @@ struct TwierView: View {
                 tabOffset = newValue == 0 ? 0 : getScreenBounds().width / maxTabs
               }
             }
-              
+            
           }
           
         }

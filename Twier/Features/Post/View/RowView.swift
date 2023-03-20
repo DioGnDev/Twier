@@ -30,6 +30,7 @@ struct RowView: View {
         (
           Text(name)
             .font(.headline)
+            .foregroundColor(Color.black)
           +
           Text(" @\(username)")
             .font(.headline)
@@ -41,6 +42,8 @@ struct RowView: View {
           .font(.subheadline)
           .fontWeight(.medium)
           .frame(maxHeight: 100, alignment: .top)
+          .foregroundColor(Color.black.opacity(0.7))
+          .multilineTextAlignment(.leading)
         
         if let postImage = imageData,
            let uiimage = UIImage(data: postImage){
@@ -57,6 +60,7 @@ struct RowView: View {
         }
       }
     })
+    .padding(.horizontal, 10)
   }
 }
 

@@ -119,4 +119,20 @@ class TwierPresenter: ObservableObject {
       })
   }
   
+  func seeAllLinkBuilder<Content: View>(@ViewBuilder content: () -> Content) -> some View {
+    NavigationLink(
+      destination: router.makeSeeAllView(),
+      label: {
+        content()
+      })
+  }
+  
+  func detailLinkBuilder<Content: View>(@ViewBuilder content: () -> Content) -> some View {
+    NavigationLink(
+      destination: router.makeSeeAllView(),
+      label: {
+        content()
+      })
+  }
+  
 }

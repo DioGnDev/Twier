@@ -17,4 +17,12 @@ struct TwierRouter {
     return CreateView(presenter: presenter)
   }
   
+  func makeSeeAllView() -> some View {
+    return EmptyView()
+  }
+  
+  func makeDetailView() -> some View {
+    return EmptyView()
+  }
+  
 }
