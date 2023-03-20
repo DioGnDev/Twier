@@ -55,6 +55,7 @@ struct CreateView: View {
       }
       
     }
+    .navigationTitle("Create")
     .sheet(isPresented: $isPresented) {
       PhotoPicker(pickerResult: $presenter.image,
                   isPresented: $isPresented)
