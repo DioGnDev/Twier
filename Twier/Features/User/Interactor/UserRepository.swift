@@ -10,7 +10,7 @@ import Combine
 protocol UserRepository {
   func getUser(with username: String) -> AnyPublisher<User, DatabaseError>
   func getUsers() -> AnyPublisher<[User], DatabaseError>
-  func createUser(name: String, username: String) -> AnyPublisher<Bool, DatabaseError>
+  func createUser(name: String, username: String, avatar: String) -> AnyPublisher<Bool, DatabaseError>
 }
 
 
@@ -22,8 +22,8 @@ struct TwierUserRepository: UserRepository {
     self.localDatasource = localDatasource
   }
   
-  func createUser(name: String, username: String) -> AnyPublisher<Bool, DatabaseError> {
-    return localDatasource.createUser(name: name, username: username)
+  func createUser(name: String, username: String, avatar: String) -> AnyPublisher<Bool, DatabaseError> {
+    return localDatasource.createUser(name: name, username: username, avatar: avatar)
   }
   
   func getUser(with username: String) -> AnyPublisher<User, DatabaseError> {

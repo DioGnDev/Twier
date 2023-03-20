@@ -16,7 +16,6 @@ final class CreatePresenterTests: XCTestCase {
   func test_createPostWithReturnFailed() {
     //given
     let expectation = expectation(description: "Promise...")
-    let context = PersistenceController.shared.container.viewContext
     let dataSource = MockCreateLocalDataSourceFailed()
     
     var isSuccess: Bool = false
@@ -25,7 +24,7 @@ final class CreatePresenterTests: XCTestCase {
     sut = CreateInteractorImpl(dataSource: dataSource)
     
     //when
-    sut.createPost(username: "dio99",
+    sut.createPost(username: "steve",
                    text: "Test Post",
                    image: Data())
     .receive(on: DispatchQueue.global(qos: .userInteractive))
@@ -60,7 +59,7 @@ final class CreatePresenterTests: XCTestCase {
     sut = MockCreateInteractorImpl(dataSource: dataSource)
     
     //when
-    sut.createPost(username: "diiyo99",
+    sut.createPost(username: "steve",
                    text: "Test Post",
                    image: Data())
     .receive(on: DispatchQueue.global(qos: .userInteractive))

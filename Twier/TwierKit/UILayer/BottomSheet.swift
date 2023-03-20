@@ -9,7 +9,7 @@ import Combine
 struct BottomSheet: View {
   
   private var userSession: UserSession
-  
+  @ObservedObject var presenter: TwierPresenter
   @State var offset: CGFloat = 0
   @Binding var showSheet: Bool
   @Binding var selectedUser: UserModel
@@ -18,11 +18,13 @@ struct BottomSheet: View {
   var subscriptions = Set<AnyCancellable>()
   
   init(userSession: UserSession,
+       presenter: TwierPresenter,
        users: [User],
        showSheet: Binding<Bool>,
        selectedUser: Binding<UserModel>) {
     
     self.userSession = userSession
+    self.presenter = presenter
     self.users = users
     self._showSheet = showSheet
     self._selectedUser = selectedUser
@@ -51,7 +53,8 @@ struct BottomSheet: View {
               
               Button {
                 selectedUser = UserModel(name: user.name ?? "",
-                                         username: user.username ?? "")
+                                         username: user.username ?? "",
+                                         avatar: user.avatar ?? "")
                 self.userSession.setUsername(user.username ?? "")
                 withAnimation {
                   showSheet.toggle()
@@ -60,10 +63,11 @@ struct BottomSheet: View {
                 
                 HStack(alignment: .bottom, spacing: 12) {
                   
-                  Image(systemName: "person.circle.fill")
+                  Image(user.avatar ?? "")
                     .resizable()
                     .frame(width: 30, height: 30)
                     .foregroundColor(Color("PrimaryColor"))
+                    .clipShape(Circle())
                   
                   VStack(alignment: .leading) {
                     Text(user.name ?? "")
@@ -110,6 +114,9 @@ struct BottomSheet: View {
           withAnimation{ showSheet.toggle() }
         })
     )
+    .onAppear{
+      presenter.readUsers()
+    }
   }
   
   func onChanged(value: DragGesture.Value){

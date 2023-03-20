@@ -250,7 +250,7 @@
 		4623A66129C17D6B00FFAEBE /* Twier */ = {
 			isa = PBXGroup;
 			children = (
-				46ED29F329C4714B006109E0 /* UIKit */,
+				46ED29F329C4714B006109E0 /* TwierKit */,
 				4612F2DA29C2302400B20EFD /* Features */,
 				4623A66229C17D6B00FFAEBE /* TwierApp.swift */,
 				4623A66629C17D6D00FFAEBE /* Assets.xcassets */,
@@ -431,13 +431,13 @@
 			path = UILayer;
 			sourceTree = "<group>";
 		};
-		46ED29F329C4714B006109E0 /* UIKit */ = {
+		46ED29F329C4714B006109E0 /* TwierKit */ = {
 			isa = PBXGroup;
 			children = (
 				46ED29F229C47140006109E0 /* UILayer */,
 				4612F2E729C2310700B20EFD /* DataLayer */,
 			);
-			path = UIKit;
+			path = TwierKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

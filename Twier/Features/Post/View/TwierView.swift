@@ -110,13 +110,11 @@ struct TwierView: View {
         
         BottomSheet(
           userSession: UserSession.shared,
+          presenter: presenter,
           users: presenter.users,
           showSheet: $showBottomSheet,
           selectedUser: $presenter.selectedUser
-        )
-        .onAppear{
-          presenter.readUsers()
-        }
+       )
       }
       .onAppear{
         presenter.checkUser()

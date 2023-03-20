@@ -9,4 +9,5 @@ import Foundation
 struct UserModel: Equatable{
   let name: String
   let username: String
+  let avatar: String
 }

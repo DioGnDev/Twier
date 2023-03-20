@@ -10,7 +10,7 @@ struct AllPostView: View {
   var presenter: TwierPresenter
   
   var body: some View {
-    ScrollView {
+    ScrollView(.vertical, showsIndicators: false) {
       VStack {
         HStack {
           Spacer()
@@ -29,6 +29,7 @@ struct AllPostView: View {
           presenter.detailLinkBuilder {
             RowView(name: post.user?.name ?? "",
                     username: post.user?.username ?? "",
+                    avatar: post.user?.avatar ?? "",
                     text: post.message ?? "",
                     imageData: post.image)
             .padding(.top, 16)

@@ -45,9 +45,9 @@ class TwierInteractorImpl: TwierInteractor {
     
     return Future<Bool, DatabaseError> { completion in
       
-      let user1 = UserModel(name: "Ilham", username: "ilham99")
-      let user2 = UserModel(name: "Dio", username: "dio99")
-      let user3 = UserModel(name: "JP", username: "jp6")
+      let user1 = UserModel(name: "Steve Vai", username: "steve", avatar: "steve_vai")
+      let user2 = UserModel(name: "Joe Satriani", username: "joe", avatar: "joe_satriani")
+      let user3 = UserModel(name: "John Petrucci", username: "jp6", avatar: "john_petrucci")
       
       let users = [user1, user2, user3]
       
@@ -58,7 +58,9 @@ class TwierInteractorImpl: TwierInteractor {
         group.enter()
         queue.async(group: group){ [weak self] in
           guard let self = self else { return }
-          self.userRepository.createUser(name: user.name, username: user.username)
+          self.userRepository.createUser(name: user.name,
+                                         username: user.username,
+                                         avatar: user.avatar)
             .sink(receiveCompletion: { completion in
               print(completion)
             }, receiveValue: { succeedded in
