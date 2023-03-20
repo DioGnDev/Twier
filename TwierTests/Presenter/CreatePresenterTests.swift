@@ -13,11 +13,11 @@ final class CreatePresenterTests: XCTestCase {
   var sut: CreateInteractor!
   var subscriptions = Set<AnyCancellable>()
   
-  func test_createPostWithReturnSuccess() {
+  func test_createPostWithReturnFailed() {
     //given
     let expectation = expectation(description: "Promise...")
     let context = PersistenceController.shared.container.viewContext
-    let dataSource = MockCreateLocalDataSourceImpl(context: context)
+    let dataSource = MockCreateLocalDataSourceFailed()
     
     var isSuccess: Bool = false
     var isError: Bool = false
@@ -44,9 +44,8 @@ final class CreatePresenterTests: XCTestCase {
     
     //then
     waitForExpectations(timeout: 5)
-    XCTAssertTrue(isSuccess)
-    XCTAssertFalse(isError)
-    
+    XCTAssertTrue(isError)
+    XCTAssertFalse(isSuccess)
   }
   
   func test_createPostWithFailure() {
